@@ -31,7 +31,7 @@
 #### ¿Te has encontrado con noticias falsas en alguna red social?
 
 #### ¿Conoces el impacto que tienen las noticias falsas en la política de una nación?
-
+##### - Diego
 
 ### Vigilancia
 
