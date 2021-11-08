@@ -1,6 +1,8 @@
 # Objetivo
 Recabar información de como la población estudiantil percibe la ciberseguridad del día a día a través de redes sociales
+
 Estudiar y analizar que tanto se conoce de la ciberseguridad
+
 Examinar el pensamiento de estudiantes de licenciatura respecto a la recaudación de datos
 
 # Posibles preguntas
