@@ -1,9 +1,10 @@
 # Objetivo
-Recabar información de como la población estudiantil percibe la ciberseguridad del día a día a través de redes sociales
 
-Estudiar y analizar que tanto se conoce de la ciberseguridad
+- Recabar información de como la población estudiantil percibe la ciberseguridad del día a día a través de redes sociales
 
-Examinar el pensamiento de estudiantes de licenciatura respecto a la recaudación de datos
+- Estudiar y analizar que tanto se conoce de la ciberseguridad
+
+- Examinar el pensamiento de estudiantes de licenciatura respecto a la recaudación de datos
 
 # Posibles preguntas
 
@@ -43,13 +44,13 @@ Examinar el pensamiento de estudiantes de licenciatura respecto a la recaudació
 ## Redes sociales
 1. De las siguientes redes sociales, ¿cuál es la que utilizas más?
 
--Facebook
--Instagram
--WhatsApp 
--Twitter 
--TikTok 
--Ninguna
--Otra
+    - Facebook
+    - Instagram
+    - WhatsApp 
+    - Twitter 
+    - TikTok 
+    - Ninguna
+    - Otra
 
 2. ¿Te has preguntado qué datos personales recolectan las redes sociales? 
 
@@ -64,21 +65,22 @@ Examinar el pensamiento de estudiantes de licenciatura respecto a la recaudació
 7. ¿Te has encontrado con noticias falsas en alguna red social?
 
 8. ¿Conoces el impacto que tienen las noticias falsas en la política de una nación?
+
 - Diego
 
 ## Vigilancia
-1. ¿Consideras que alguna red social utliza tus datos de forma ilicita para vigilarte? y/n
 
+1. ¿Consideras que alguna red social utliza tus datos de forma ilicita para vigilarte? y/n
 
 2. ¿Cuál?
 
--Facebook
--Instagram
--WhatsApp 
--Twitter 
--TikTok 
--Ninguna
--Otra 
+    - Facebook
+    - Instagram
+    - WhatsApp 
+    - Twitter 
+    - TikTok 
+    - Ninguna
+    - Otra 
 
 3. ¿Te incomoda esto?
 
@@ -88,12 +90,12 @@ Examinar el pensamiento de estudiantes de licenciatura respecto a la recaudació
 
 6. Que medidas consideras extremistas al hablar de protección de datos personales:
 
--Utilizar contraseñas sugeridas por navegador(comunmente encriptadas y muy largas)
+   - Utilizar contraseñas sugeridas por navegador(comunmente encriptadas y muy largas)
 
--Utilizar navegadores con baja latencia para evitar el robo de datos(i.e. Onion routing)
+   - Utilizar navegadores con baja latencia para evitar el robo de datos(i.e. Onion routing)
 
--Tapar con un tape tu webcam cuando no la quieras utliizar
+   - Tapar con un tape tu webcam cuando no la quieras utliizar
 
 7. ¿Piensas que existe una manera más efectiva de presentar estás políticas de manera que, puede existir un incremento en el numero de personas que deliberadamente y conscientemente aceptan estas politicas? y/n
 
---Emilio
+- Emilio
