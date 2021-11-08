@@ -18,6 +18,20 @@
 
 ## Privacidad
 
+1. ¿Sabes en que consiste la privacidad digital?
+
+2. ¿Conoces la facilidad con la que tus datos pueden circulan en internet con acciones tan simples como usar un navegador, publicar una foto en alguna red social o dejar un comentario en un Twitter?
+
+3. ¿Conoces el término “identidad digital” o “huella digital” y sabes para que usa?
+
+4. Cuando ingresas a un sitio web, ¿te detienes a leer sus términos y condiciones, o las aceptas sin leerlas?
+
+5. ¿Has sufrido alguna practica de phishing, spam, virus y troyanos, ciberacoso o fraude digital?
+
+6. ¿Conoces la normativa que regula la privacidad digital en nuestro país?
+
+- Fernanda
+
 ## Seguridad e integridad física y psicológica
 
 ## Redes sociales
