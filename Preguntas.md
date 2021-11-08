@@ -61,6 +61,19 @@
 - Diego
 
 ## Vigilancia
+1. ¿Consideras que alguna red social utliza tus datos de forma ilicita para vigilarte? y/n
+2. ¿Te incomoda esto?
+3. ¿Cuál?
+-Facebook
+-Instagram
+-WhatsApp 
+-Twitter 
+-TikTok 
+-Ninguna
+-Otra 
+4.
+5. 
+6. ¿Piensas que existe una manera más efectiva de presentar estás políticas de manera que, puede existir un incremento en el numero de personas que deliberadamente y conscientemente aceptan estas politicas? y/n
 
 ## Otorgar datos vs seguridad
 
