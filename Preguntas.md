@@ -61,7 +61,25 @@
 - Diego
 
 ## Vigilancia
-
+1. ¿Consideras que alguna red social utliza tus datos de forma ilicita para vigilarte? y/n
+2. ¿Te incomoda esto?
+3. ¿Cuál?
+-Facebook
+-Instagram
+-WhatsApp 
+-Twitter 
+-TikTok 
+-Ninguna
+-Otra 
+4. ¿Te incomoda que algunas aplicaciones puedan acceder a tu webcam?
+5. Que medidas consideras extremistas al hablar de protección de datos personales:
+-Utilizar contraseñas sugeridas por navegador(comunmente encriptadas y muy largas)
+-Utilizar navegadores con baja latencia para evitar el robo de datos(i.e. Onion routing)
+-Tapar con un tape tu webcam cuando no la quieras utliizar
+-
+7. ¿Sientes que tus datos que proporcionas a las empresas son de alguna importancia/utilidad para la empresa a la que indirectamente se los otorgas? y/n
+8. ¿Piensas que existe una manera más efectiva de presentar estás políticas de manera que, puede existir un incremento en el numero de personas que deliberadamente y conscientemente aceptan estas politicas? y/n
+-Emilio
 ## Otorgar datos vs seguridad
 
 ## etc.
