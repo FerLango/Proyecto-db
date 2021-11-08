@@ -1,3 +1,6 @@
+# Objetivo
+Recabar información de como la población estudiantil percibe la ciberseguridad del dia a dia a traves de redes sociales
+
 # Posibles preguntas
 
 ## Ciberseguridad
