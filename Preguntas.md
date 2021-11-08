@@ -1,8 +1,6 @@
-# Proyecto-db
+# Posibles preguntas
 
-## Posibles preguntas
-
-### Ciberseguridad
+## Ciberseguridad
 
 1. La ciberseguridad es la práctica de defender las computadoras, los servidores, los dispositivos móviles, los sistemas electrónicos, las redes y los datos de ataques maliciosos. (Acuerdo o en desacuerdo)
 
@@ -18,11 +16,11 @@
 
 - Fernando
 
-### Privacidad
+## Privacidad
 
-### Seguridad e integridad física y psicológica
+## Seguridad e integridad física y psicológica
 
-### Redes sociales
+## Redes sociales
 1. De las siguientes redes sociales, ¿cuál es la que utilizas más?
 
 -Facebook
@@ -48,8 +46,8 @@
 8. ¿Conoces el impacto que tienen las noticias falsas en la política de una nación?
 - Diego
 
-### Vigilancia
+## Vigilancia
 
-### Otorgar datos vs seguridad
+## Otorgar datos vs seguridad
 
-### etc.
+## etc.
