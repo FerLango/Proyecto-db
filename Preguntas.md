@@ -95,9 +95,9 @@ Examinar el pensamiento de estudiantes de licenciatura respecto a la recaudació
 
 -Tapar con un tape tu webcam cuando no la quieras utliizar
 
-8. ¿Piensas que existe una manera más efectiva de presentar estás políticas de manera que, puede existir un incremento en el numero de personas que deliberadamente y conscientemente aceptan estas politicas? y/n
+7. ¿Piensas que existe una manera más efectiva de presentar estás políticas de manera que, puede existir un incremento en el numero de personas que deliberadamente y conscientemente aceptan estas politicas? y/n
 
--Emilio
+--Emilio
 
 ## Otorgar datos vs seguridad
 
