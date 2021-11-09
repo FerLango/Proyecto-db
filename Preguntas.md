@@ -1,12 +1,49 @@
-# Objetivo
+# Objetivo Principal
 
-- Recabar información de como la población estudiantil percibe la ciberseguridad del día a día a través de redes sociales
 
-- Estudiar y analizar que tanto se conoce de la ciberseguridad
+- Conocer la percepción de ciberseguridad entre estudiantes de licenciatura //Xuxo
 
-- Examinar el pensamiento de estudiantes de licenciatura respecto a la recaudación de datos
+
+# Objetivos específicos 
+
+- Conocer los usos y necesidades de tecnología de la población estudiantil (Redes sociales)
+
+- Estudiar y analizar que tanto se conoce de la ciberseguridad (Cs)
+
+- Analizar la percepción de amenazas y ataques digitales (Privacidad y Ciber)
+
+- Conocer las medidas de seguridad más utilizadas (Privacidad)
+
+# ¿Qué queremos medir?
+
+- La importancia de la ciberseguridad que le dan los estudiantes al utilizar redes sociales
 
 # Posibles preguntas
+
+# Demografía 
+
+- Edad
+- Sexo
+- Carrera
+- Uni
+- Estado
+
+- ¿Cuantos dispositivos con acceso internet tienes? (mide vulnerabilidad) int
+- ¿Cuantos de estos dispositivos cuenta con antivirus? int
+- ¿Cuantas redes sociales utilizas? int
+- De las siguientes redes sociales, ¿cuál es la que utilizas más?
+
+    - Facebook
+    - Instagram
+    - WhatsApp 
+    - Twitter 
+    - TikTok 
+    - Ninguna
+    - Otra
+ 
+- ¿Tienes banca electrónica? y/n
+- ¿Has realizado compras en linea?
+- ¿Te han llegado cargos no reconocidos?
 
 ## Ciberseguridad
 
