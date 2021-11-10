@@ -1,7 +1,7 @@
 # Objetivo Principal
 
 
-- Conocer la percepción de ciberseguridad entre estudiantes de licenciatura //Xuxo
+- Conocer la percepción de ciberseguridad entre estudiantes de licenciatura
 
 
 # Objetivos específicos 
