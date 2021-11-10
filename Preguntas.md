@@ -95,13 +95,18 @@
 
 4. ¿Alguna vez has consultado la información que las redes sociales que utilizas recolectan de ti mientras estas activo en otra plataforma?  
 
-5. ¿Estarías dispuesto a intercambiar información personal a cambio de una mejor experiencia de usuario? 
+5. ¿Estarías dispuesto a intercambiar información personal por una mejor experiencia de usuario? 
 
-6. ¿Estás consciente de los efectos que tienen las redes sociales en la salud mental de las personas?
+6. Con el fin de proteger tus cuentas de redes sociales, ¿cuáles de las siguientes opciones realizas?
 
-7. ¿Te has encontrado con noticias falsas en alguna red social?
+    - Crear una contraseña fuerte
+    - Cambiar de contraseña frecuentemente 
+    - Usar diferentes contraseñas para diferentes cuentas
+    - Evitar acceder a tus redes sociales en computadoras públicas
+    - Evitar acceder a tus redes sociales usando conexiones inalámbricas públicas 
+    - Tener cuidado con enlaces que te han enviado 
+    - Ninguna 
 
-8. ¿Conoces el impacto que tienen las noticias falsas en la política de una nación?
 
 - Diego
 
