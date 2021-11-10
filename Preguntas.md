@@ -27,14 +27,30 @@ Con estas primeras preguntas pretendemos conocer un poco mas a nuestra poblacion
 - ¿Eres alumno de licenciatura? 
     - Si
     - No  
+
 En caso de responder que no, finalizara automaticamente la encuesta. Dentro de nuestro plan de difusion de la encuesta tomaremos todas las medidas necesarias para que transite unicamente entre estudiantes de licenciatura. Sin embargo, ponemos esta pregunta para asegurarnos y tener una encuesta valida para el estudio.
+
 - ¿Que edad tienes? int 
-- Genero Masculino/Femenino
-- ¿En que estado se encuentra ubicada tu Universidad? Estados de la Rep -Ya que uno de los integrantes del equipo es de Michoacan y la difundira con sus conocidos no es importante notar esta diferencia y creemos que nos sera util para el analisis tener una vision mas amplia. Tambien puede que quienes la contesten por redes no vivan en la CDMX
-- ¿A que ciencias esta relacionada tu carrera? Fisico Matematicas/Administrativas...
-- ¿Cuantos dispositivos con acceso internet tienes? int - De esta manera mediremos la vulnerabilidad de cada persona
+- Genero 
+    - Masculino
+    - Femenino 
+    - Otros
+- ¿En que estado se encuentra ubicada tu Universidad? 
+    - Estados de la Republica
+    
+Ya que uno de los integrantes del equipo es de Michoacan y la difundira con sus conocidos no es importante notar esta diferencia y creemos que nos sera util para el analisis tener una vision mas amplia. Tambien puede que quienes la contesten por redes no vivan en la CDMX
+
+- ¿A que area corresponde tu carrera? 
+    - Fisico Matematicas y de la Ingenieria 
+    - Biologicas y de la salud
+    - Sociales
+    - Artes y Humanidades
+- ¿Cuantos dispositivos con acceso internet tienes? int 
+ De esta manera mediremos la vulnerabilidad de cada persona.
+- ¿Cuantos tienen su ultima actualizacion? int 
 - ¿Cuantos de estos dispositivos cuenta con antivirus? int
 - ¿Cuantas redes sociales utilizas? int
+En caso de responder 0, la siguiente pregunta no aplicara
 - De las siguientes redes sociales, ¿cuál es la que utilizas más?
 
     - Facebook
@@ -45,11 +61,41 @@ En caso de responder que no, finalizara automaticamente la encuesta. Dentro de n
     - Ninguna
     - Otra
  
-- ¿Tienes banca electrónica? y/n
+- ¿Tienes banca electrónica? 
+    - Si
+    - No
 - ¿Has realizado compras en linea?
-- ¿Te han llegado cargos no reconocidos?
+    - Si 
+    - No
+- Cuando ingresas a un sitio web, ¿te detienes a leer sus términos y condiciones, o las aceptas sin leerlas?
+    - Las reviso detenidamente
+    - Las acepto para continuar rapidamente con mi navegacion
+- Despues de buscar algun articulo en internet, ¿la publicidad que se le muestra en redes sociales corresponde a ese articulo?
+    - Si 
+    - No
+Esta pregunta reafirmaria la anterior
+- ¿Te han llegado cargos de aplicaciones o redes sociales que no autorizaste?
+    - Si 
+    - No
+- ¿Del 1 al 5 que tanto te preocupa tu seguridad digital?
+    - Esacala de 1 a 5
+- ¿Has sufrido alguna de las siguientes practicas?
+    - Correos solicitando informacion condifencial de fuentes no autorizadas
+    - Acoso digital
+    - Fraude digital
+    - Robo de identidad
+    - Dispositivo expuesto a virus
 
-## Cuestionamientos
+Se puede seleccionar mas de una opcion
+- ¿Conoces a alguien que haya sufrido alguna de estas practicas?
+    - Si
+    - No
+Con el fin de observar que tan comunes son estas prcticas en su entorno
+
+- ¿Crees que la configuracion de seguridad en tus dispositivos tuvo algo que ver?
+    - Si
+    - No 
+    - No se
 
 1. La ciberseguridad es la práctica de defender las computadoras, los servidores, los dispositivos móviles, los sistemas electrónicos, las redes y los datos de ataques maliciosos. (Acuerdo o en desacuerdo)
 
@@ -75,17 +121,6 @@ En caso de responder que no, finalizara automaticamente la encuesta. Dentro de n
 
 12. ¿Conoces el término “identidad digital” o “huella digital” y sabes para que usa?
 
-13. Cuando ingresas a un sitio web, ¿te detienes a leer sus términos y condiciones, o las aceptas sin leerlas?
-
-14. De las siguientes redes sociales, ¿cuál es la que utilizas más?
-
-    - Facebook
-    - Instagram
-    - WhatsApp 
-    - Twitter 
-    - TikTok 
-    - Ninguna
-    - Otra
   
 15. ¿Consideras que alguna red social utliza tus datos de forma ilicita para vigilarte? y/n
 
