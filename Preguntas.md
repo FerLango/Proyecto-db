@@ -22,13 +22,14 @@
 
 # Demografía 
 
-- Edad
-- Sexo
-- Carrera
-- Universidad
-- Estado
+Con estas primeras preguntas pretendemos conocer un poco mas a nuestra poblacion y filtrar que solamente estudiantes de licenciatura contesten la encuesta.
 
-- ¿Cuantos dispositivos con acceso internet tienes? (mide vulnerabilidad) int
+- ¿Eres alumno de licenciatura? Y/N  - En caso de responder que no, finalizara automaticamente la encuesta. Dentro de nuestro plan de difusion de la encuesta tomaremos todas las medidas necesarias para que transite unicamente entre estudiantes de licenciatura. Sin embargo, ponemos esta pregunta para asegurarnos y tener una encuesta valida para el estudio.
+- ¿Que edad tienes? int 
+- Genero Masculino/Femenino
+- ¿En que estado se encuentra ubicada tu Universidad? Estados de la Rep -Ya que uno de los integrantes del equipo es de Michoacan y la difundira con sus conocidos no es importante notar esta diferencia y creemos que nos sera util para el analisis tener una vision mas amplia. Tambien puede que quienes la contesten por redes no vivan en la CDMX
+- ¿A que ciencias esta relacionada tu carrera? Fisico Matematicas/Administrativas...
+- ¿Cuantos dispositivos con acceso internet tienes? int - De esta manera mediremos la vulnerabilidad de cada persona
 - ¿Cuantos de estos dispositivos cuenta con antivirus? int
 - ¿Cuantas redes sociales utilizas? int
 - De las siguientes redes sociales, ¿cuál es la que utilizas más?
