@@ -45,7 +45,7 @@
 - ¿Has realizado compras en linea?
 - ¿Te han llegado cargos no reconocidos?
 
-## Ciberseguridad
+## Cuestionamientos
 
 1. La ciberseguridad es la práctica de defender las computadoras, los servidores, los dispositivos móviles, los sistemas electrónicos, las redes y los datos de ataques maliciosos. (Acuerdo o en desacuerdo)
 
@@ -53,45 +53,27 @@
 
 3. Conozco las consecuencias de no tener una buena ciberseguridad. (Acuerdo o en desacuerdo)
 
-4. Utilizo buenas prácticas de ciberseguridad en todos los dispositivos que utilizo. (Acuerdo o en desacuerdo)
+4. ¿Sabes en que consiste la privacidad digital?
 
-5. Alguna vez he sido expuesto a algún virus y he sido notificado por mi antivirus?
+5. ¿Conoces la normativa que regula la privacidad digital en nuestro país?
 
-6. Creo que alguna vez he sido expuesto a algún virus y no ser notificado por mi antivirus?
+6. Utilizo buenas prácticas de ciberseguridad en todos los dispositivos que utilizo. (Acuerdo o en desacuerdo)
 
-- Fernando
+7. Alguna vez he sido expuesto a algún virus y he sido notificado por mi antivirus?
 
-## Privacidad
+8. Creo que alguna vez he sido expuesto a algún virus y no ser notificado por mi antivirus?
 
-1. ¿Sabes en que consiste la privacidad digital?
+9. ¿Has sufrido alguna practica de phishing, spam, virus y troyanos, ciberacoso o fraude digital?
 
-1. ¿Qué medidas consideras al hablar de protección de datos personales: //Podriamos iniciar con esta pregunta para darnos una idea de que tan informados están los estudiantes
+10. ¿Conoces la facilidad con la que tus datos pueden circulan en internet con acciones tan simples como usar un navegador, publicar una foto en alguna red social o dejar un comentario en un Twitter?
 
-   - Utilizar contraseñas sugeridas por navegador(comúnmente encriptadas y muy largas)
+11. ¿Te incomoda que algunas aplicaciones puedan acceder a tu webcam?
 
-   - Utilizar navegadores con baja latencia para evitar el robo de datos(i.e. Onion routing)
+12. ¿Conoces el término “identidad digital” o “huella digital” y sabes para que usa?
 
-2. ¿Conoces la facilidad con la que tus datos pueden circulan en internet con acciones tan simples como usar un navegador, publicar una foto en alguna red social o dejar un comentario en un Twitter?
+13. Cuando ingresas a un sitio web, ¿te detienes a leer sus términos y condiciones, o las aceptas sin leerlas?
 
-3. ¿Conoces el término “identidad digital” o “huella digital” y sabes para que usa?
-
-4. Cuando ingresas a un sitio web, ¿te detienes a leer sus términos y condiciones, o las aceptas sin leerlas?
-
-5. ¿Has sufrido alguna practica de phishing, spam, virus y troyanos, ciberacoso o fraude digital?
-
-6. ¿Conoces la normativa que regula la privacidad digital en nuestro país?
-
-7. ¿Piensas que podrían presentar las políticas de privacidad de una manera distinta? y/n //Pregunta adicional
-
-
-
-
-
-- Fernanda
-
-
-## Redes sociales
-1. De las siguientes redes sociales, ¿cuál es la que utilizas más?
+14. De las siguientes redes sociales, ¿cuál es la que utilizas más?
 
     - Facebook
     - Instagram
@@ -100,16 +82,32 @@
     - TikTok 
     - Ninguna
     - Otra
+  
+15. ¿Consideras que alguna red social utliza tus datos de forma ilicita para vigilarte? y/n
 
-2. En una escala de 1-10 ¿qué tanto te preocupa tu privacidad en tus redes sociales? 
+16. ¿Cuál?
 
-3. ¿Alguna vez has consultado la información que las redes sociales que utilizas recolectan de ti mientras estas activo en su plataforma? 
+    - Facebook
+    - Instagram
+    - WhatsApp 
+    - Twitter 
+    - TikTok 
+    - Ninguna
+    - Otra 
 
-4. ¿Alguna vez has consultado la información que las redes sociales que utilizas recolectan de ti mientras estas activo en otra plataforma?  
+17. ¿Te incomoda esto?
 
-5. ¿Estarías dispuesto a intercambiar información personal por una mejor experiencia de usuario? 
+18. En una escala de 1-10 ¿qué tanto te preocupa tu privacidad en tus redes sociales? 
 
-6. Con el fin de proteger tus cuentas de redes sociales, ¿cuáles de las siguientes opciones realizas?
+19.¿Sientes que tus datos que proporcionas a las empresas son de alguna importancia/utilidad para la empresa a la que indirectamente se los otorgas? y/n
+
+20. ¿Alguna vez has consultado la información que las redes sociales que utilizas recolectan de ti mientras estas activo en su plataforma? 
+
+21. ¿Alguna vez has consultado la información que las redes sociales que utilizas recolectan de ti mientras estas activo en otra plataforma?  
+
+22. ¿Estarías dispuesto a intercambiar información personal por una mejor experiencia de usuario? 
+
+23. Con el fin de proteger tus cuentas de redes sociales, ¿cuáles de las siguientes opciones realizas?
 
     - Crear una contraseña fuerte
     - Cambiar de contraseña frecuentemente 
@@ -119,5 +117,13 @@
     - Tener cuidado con enlaces que te han enviado 
     - Ninguna 
 
+24. Que medidas consideras extremistas al hablar de protección de datos personales:
 
-- Diego
+   - Utilizar contraseñas sugeridas por navegador(comunmente encriptadas y muy largas)
+
+   - Utilizar navegadores con baja latencia para evitar el robo de datos(i.e. Onion routing)
+
+   - Tapar con un tape tu webcam cuando no la quieras utliizar
+
+25. ¿Piensas que existe una manera más efectiva de presentar estás políticas de manera que, puede existir un incremento en el numero de personas que deliberadamente y conscientemente aceptan estas politicas? y/n
+
