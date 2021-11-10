@@ -8,9 +8,9 @@
 
 - Conocer los usos y necesidades de tecnología de la población estudiantil (Redes sociales)
 
-- Estudiar y analizar que tanto se conoce de la ciberseguridad (Ciber)
+- Estudiar y analizar que tanto se conoce de la ciberseguridad (Ciberseguridad)
 
-- Analizar la percepción de amenazas y ataques digitales (Privacidad y Ciber)
+- Analizar la percepción de amenazas y ataques digitales (Privacidad y Ciberseguridad)
 
 - Conocer las medidas de seguridad más utilizadas (Privacidad)
 
