@@ -25,7 +25,7 @@
 - Edad
 - Sexo
 - Carrera
-- Uni
+- Universidad
 - Estado
 
 - ¿Cuantos dispositivos con acceso internet tienes? (mide vulnerabilidad) int
@@ -89,7 +89,7 @@
     - Ninguna
     - Otra
 
-2. ¿Te has preguntado qué datos personales recolectan las redes sociales? 
+2. En una escala de 1-10 ¿qué tanto te preocupa tu privacidad en tus redes sociales? 
 
 3. ¿Alguna vez has consultado la información que las redes sociales que utilizas recolectan de ti mientras estas activo en su plataforma? 
 
