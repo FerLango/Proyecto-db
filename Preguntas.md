@@ -20,7 +20,7 @@
 
 # Posibles preguntas
 
-###Demografía 
+### Demografía 
 
 Con estas primeras preguntas pretendemos conocer un poco mas a nuestra poblacion y filtrar que solamente estudiantes de licenciatura contesten la encuesta.
 
