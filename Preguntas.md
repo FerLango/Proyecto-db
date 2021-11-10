@@ -139,3 +139,9 @@ Esta pregunta reafirmaría la anterior
     - No sé
 
 ### Fuentes
+
+- Blog de Protección de Datos, Grupo Atico34
+https://protecciondatos-lopd.com/empresas/nueva-ley-proteccion-datos-2018/
+
+- Guía sobre la privacidad digital, Grupo Atico34
+https://protecciondatos-lopd.com/empresas/privacidad-digital/
