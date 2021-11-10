@@ -46,10 +46,12 @@ Ya que uno de los integrantes del equipo es de Michoacan y la difundira con sus 
     - Sociales
     - Artes y Humanidades
 - ¿Cuantos dispositivos con acceso internet tienes? int 
+
  De esta manera mediremos la vulnerabilidad de cada persona.
 - ¿Cuantos tienen su ultima actualizacion? int 
 - ¿Cuantos de estos dispositivos cuenta con antivirus? int
 - ¿Cuantas redes sociales utilizas? int
+
 En caso de responder 0, la siguiente pregunta no aplicara
 - De las siguientes redes sociales, ¿cuál es la que utilizas más?
 
@@ -70,6 +72,11 @@ En caso de responder 0, la siguiente pregunta no aplicara
 - Cuando ingresas a un sitio web, ¿te detienes a leer sus términos y condiciones, o las aceptas sin leerlas?
     - Las reviso detenidamente
     - Las acepto para continuar rapidamente con mi navegacion
+
+- ¿Crees que seria conveniente para el usuario que los terminos y condicientes fueran presentados de una forma mas accesible para todo tipo de publico?
+    - Si 
+    - No
+    - No se
 - Despues de buscar algun articulo en internet, ¿la publicidad que se le muestra en redes sociales corresponde a ese articulo?
     - Si 
     - No
@@ -90,14 +97,40 @@ Se puede seleccionar mas de una opcion
 - ¿Conoces a alguien que haya sufrido alguna de estas practicas?
     - Si
     - No
-Con el fin de observar que tan comunes son estas prcticas en su entorno
+
+Con el fin de observar que tan comunes son estas practicas en su entorno
 
 - ¿Crees que la configuracion de seguridad en tus dispositivos tuvo algo que ver?
     - Si
     - No 
     - No se
+- Con el fin de proteger tus cuentas de redes sociales, ¿cuáles de las siguientes opciones realizas?
 
-1. La ciberseguridad es la práctica de defender las computadoras, los servidores, los dispositivos móviles, los sistemas electrónicos, las redes y los datos de ataques maliciosos. (Acuerdo o en desacuerdo)
+    - Crear una contraseña fuerte
+    - Cambiar de contraseña frecuentemente 
+    - Usar diferentes contraseñas para diferentes cuentas
+    - Evitar acceder a tus redes sociales en computadoras públicas
+    - Evitar acceder a tus redes sociales usando conexiones inalámbricas públicas 
+    - Tener cuidado con enlaces que te han enviado 
+    - Ninguna 
+
+Se puede seleccionar mas de una. Con esta pregunta obtendremos informacion de las medidad de seguridad mas comunes 
+
+- ¿Conoces la facilidad con la que tus datos pueden circulan en internet con acciones tan simples como usar un navegador, publicar una foto en alguna red social o dejar un comentario en un Twitter? * Cambiar redaccion a menos agresiva
+
+- ¿Permites que todas tus aplicaciones accedan a tu camara, microfono, ubicacion, fotos y rastreo?
+    - Si
+    - No 
+    - Nunca me he fijado
+    
+- ¿Sientes que los datos que proporcionas en la web son de alguna importancia/utilidad para la mejora de los sitios? 
+    - Si
+    - No
+    - No se
+
+### Material extra 
+
+12. La ciberseguridad es la práctica de defender las computadoras, los servidores, los dispositivos móviles, los sistemas electrónicos, las redes y los datos de ataques maliciosos. (Acuerdo o en desacuerdo)
 
 2. Le doy importancia a la ciberseguridad. (Acuerdo o en desacuerdo)
 
@@ -114,47 +147,15 @@ Con el fin de observar que tan comunes son estas prcticas en su entorno
 8. Creo que alguna vez he sido expuesto a algún virus y no ser notificado por mi antivirus?
 
 9. ¿Has sufrido alguna practica de phishing, spam, virus y troyanos, ciberacoso o fraude digital?
-
-10. ¿Conoces la facilidad con la que tus datos pueden circulan en internet con acciones tan simples como usar un navegador, publicar una foto en alguna red social o dejar un comentario en un Twitter?
-
-11. ¿Te incomoda que algunas aplicaciones puedan acceder a tu webcam?
-
-12. ¿Conoces el término “identidad digital” o “huella digital” y sabes para que usa?
-
   
-15. ¿Consideras que alguna red social utliza tus datos de forma ilicita para vigilarte? y/n
 
-16. ¿Cuál?
-
-    - Facebook
-    - Instagram
-    - WhatsApp 
-    - Twitter 
-    - TikTok 
-    - Ninguna
-    - Otra 
-
-17. ¿Te incomoda esto?
-
-18. En una escala de 1-10 ¿qué tanto te preocupa tu privacidad en tus redes sociales? 
-
-19.¿Sientes que tus datos que proporcionas a las empresas son de alguna importancia/utilidad para la empresa a la que indirectamente se los otorgas? y/n
+19.¿Sientes que tus datos que proporcionas a las empresas son de alguna importancia/utilidad para la empresa? y/n
 
 20. ¿Alguna vez has consultado la información que las redes sociales que utilizas recolectan de ti mientras estas activo en su plataforma? 
 
 21. ¿Alguna vez has consultado la información que las redes sociales que utilizas recolectan de ti mientras estas activo en otra plataforma?  
 
-22. ¿Estarías dispuesto a intercambiar información personal por una mejor experiencia de usuario? 
-
-23. Con el fin de proteger tus cuentas de redes sociales, ¿cuáles de las siguientes opciones realizas?
-
-    - Crear una contraseña fuerte
-    - Cambiar de contraseña frecuentemente 
-    - Usar diferentes contraseñas para diferentes cuentas
-    - Evitar acceder a tus redes sociales en computadoras públicas
-    - Evitar acceder a tus redes sociales usando conexiones inalámbricas públicas 
-    - Tener cuidado con enlaces que te han enviado 
-    - Ninguna 
+22. ¿Estarías dispuesto a intercambiar información personal por una mejor experiencia de usuario? - Tendencioso - 
 
 24. Que medidas consideras extremistas al hablar de protección de datos personales:
 
