@@ -39,7 +39,7 @@ En caso de responder que no, finalizara automáticamente la encuesta. Dentro de 
 - ¿En qué estado se encuentra ubicada tu Universidad? 
     - Estados de la República
     
-Ya que uno de los integrantes del equipo es de Michoacán y la difundirá con sus conocidos nos es importante notar esta diferencia y creemos que nos será útil para el análisis tener una visión más amplia. También puede que quienes la contesten por redes no vivan en la CDMX
+Ya que uno de los integrantes del equipo es de Querétaro y la difundirá con sus conocidos nos es importante notar esta diferencia y creemos que nos será útil para el análisis tener una visión más amplia. También puede que quienes la contesten por redes no vivan en la CDMX
 
 - ¿A qué área corresponde tu carrera? 
     - Físico Matemático y de la Ingeniería 
