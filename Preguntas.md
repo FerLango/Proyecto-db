@@ -30,7 +30,8 @@ Con estas primeras preguntas pretendemos conocer un poco más a nuestra poblaci�
 
 En caso de responder que no, finalizara automáticamente la encuesta. Dentro de nuestro plan de difusión de la encuesta tomaremos todas las medidas necesarias para que transite únicamente entre estudiantes de licenciatura. Sin embargo, ponemos esta pregunta para asegurarnos y tener una encuesta válida para el estudio.
 
-- ¿Qué edad tienes? int 
+- ¿Qué edad tienes?
+    - int 
 - Género 
     - Masculino
     - Femenino 
@@ -45,12 +46,16 @@ Ya que uno de los integrantes del equipo es de Michoacán y la difundirá con su
     - Biológicas y de la salud
     - Sociales
     - Artes y Humanidades
-- ¿Cuántos dispositivos con acceso internet tienes? int 
+- ¿Cuántos dispositivos con acceso internet tienes?
+    - int 
 
  De esta manera mediremos la vulnerabilidad de cada persona.
-- ¿Cuántos tienen su última actualización? int 
-- ¿Cuántos de estos dispositivos cuenta con antivirus? int
-- ¿Cuántas redes sociales utilizas? int
+- ¿Cuántos tienen su última actualización? 
+    - int 
+- ¿Cuántos de estos dispositivos cuenta con antivirus?
+    - int
+- ¿Cuántas redes sociales utilizas? 
+    - int
 
 En caso de responder 0, la siguiente pregunta no aplicará
 - De las siguientes redes sociales, ¿cuál es la que empleas más?
