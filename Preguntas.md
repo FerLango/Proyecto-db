@@ -150,3 +150,9 @@ Esta pregunta reafirmaría la anterior
 
 - Guía sobre la privacidad digital, Grupo Atico34
     - https://protecciondatos-lopd.com/empresas/privacidad-digital/
+
+- Medidas para proteger cuentas de redes sociales, U.S. securities and exchange commission 
+    - https://www.investor.gov/protect-your-investments/fraud/how-avoid-fraud/protect-your-social-media-accounts
+
+- Principales problemas de privacidad en las redes sociales, Tulane University
+    - https://sopa.tulane.edu/blog/key-social-media-privacy-issues-2020
