@@ -8,7 +8,7 @@
 
 - Conocer los usos y necesidades de tecnología de la población estudiantil (Redes sociales)
 
-- Estudiar y analizar que tanto se conoce de la ciberseguridad (Cs)
+- Estudiar y analizar que tanto se conoce de la ciberseguridad (Ciber)
 
 - Analizar la percepción de amenazas y ataques digitales (Privacidad y Ciber)
 
@@ -16,7 +16,7 @@
 
 # ¿Qué queremos medir?
 
-- La importancia de la ciberseguridad que le dan los estudiantes al utilizar redes sociales
+- La importancia que los estudiantes de licenciatura dan a la ciberseguridad en internet
 
 # Posibles preguntas
 
@@ -69,29 +69,32 @@ En caso de responder 0, la siguiente pregunta no aplicara
 - ¿Has realizado compras en linea?
     - Si 
     - No
-- Cuando ingresas a un sitio web, ¿te detienes a leer sus términos y condiciones, o las aceptas sin leerlas?
+- Cuando te registras en algun sitio web, ¿te detienes a leer sus términos y condiciones, o los aceptas sin leerlos?
     - Las reviso detenidamente
     - Las acepto para continuar rapidamente con mi navegacion
-
-- ¿Crees que seria conveniente para el usuario que los terminos y condicientes fueran presentados de una forma mas accesible para todo tipo de publico?
+- Cuando entras a un sitio web, ¿configuras las cookies, o aceptas el default?
+    - Las configuro
+    - Acepto el default
+- ¿Crees que seria conveniente para el usuario que los terminos y condiciones o cookies fueran presentados de una forma mas accesible para todo tipo de publico?
     - Si 
     - No
-    - No se
+    - Me es indiferente
 - Despues de buscar algun articulo en internet, ¿la publicidad que se le muestra en redes sociales corresponde a ese articulo?
     - Si 
     - No
-Esta pregunta reafirmaria la anterior
-- ¿Te han llegado cargos de aplicaciones o redes sociales que no autorizaste?
+Esta pregunta reafirmaria las anteriores
+- ¿Te han llegado cargos que no autorizaste de alguna aplicacion con la que estabas en un periodo prueba (ej. Spotify, Netflix...)?
     - Si 
     - No
+
 - ¿Del 1 al 5 que tanto te preocupa tu seguridad digital?
-    - Esacala de 1 a 5
+    - Escala de 1 a 5
 - ¿Has sufrido alguna de las siguientes practicas?
     - Correos solicitando informacion condifencial de fuentes no autorizadas
     - Acoso digital
     - Fraude digital
     - Robo de identidad
-    - Dispositivo expuesto a virus
+    - Cambios en nuestros dispositivos que no conocemos
 
 Se puede seleccionar mas de una opcion
 - ¿Conoces a alguien que haya sufrido alguna de estas practicas?
@@ -106,7 +109,7 @@ Con el fin de observar que tan comunes son estas practicas en su entorno
     - No se
 - Con el fin de proteger tus cuentas de redes sociales, ¿cuáles de las siguientes opciones realizas?
 
-    - Crear una contraseña fuerte
+    - Crear una contraseña fuerte (Al menos 8 caracteres, incluyendo mayusculas, minusculas, numeros y caracteres especiales)
     - Cambiar de contraseña frecuentemente 
     - Usar diferentes contraseñas para diferentes cuentas
     - Evitar acceder a tus redes sociales en computadoras públicas
@@ -114,56 +117,25 @@ Con el fin de observar que tan comunes son estas practicas en su entorno
     - Tener cuidado con enlaces que te han enviado 
     - Ninguna 
 
-Se puede seleccionar mas de una. Con esta pregunta obtendremos informacion de las medidad de seguridad mas comunes 
+Se puede seleccionar mas de una. Con esta pregunta obtendremos informacion de las medidas de seguridad mas comunes 
 
-- ¿Conoces la facilidad con la que tus datos pueden circulan en internet con acciones tan simples como usar un navegador, publicar una foto en alguna red social o dejar un comentario en un Twitter? * Cambiar redaccion a menos agresiva
+- ¿Conoces la facilidad con la que los datos circulan en las redes sociales?
+    - Si 
+    - No 
+- ¿Tienes configurado en tu navegador alguna proteccion de privacidad?
+    - Si
+    - No
+
+Esta pregunta reafirmaria la anterior
 
 - ¿Permites que todas tus aplicaciones accedan a tu camara, microfono, ubicacion, fotos y rastreo?
     - Si
     - No 
     - Nunca me he fijado
     
-- ¿Sientes que los datos que proporcionas en la web son de alguna importancia/utilidad para la mejora de los sitios? 
+- ¿Sientes que los datos que proporcionas en la web son de importancia/utilidad para los sitios en los que navegas? 
     - Si
     - No
     - No se
 
-### Material extra 
-
-12. La ciberseguridad es la práctica de defender las computadoras, los servidores, los dispositivos móviles, los sistemas electrónicos, las redes y los datos de ataques maliciosos. (Acuerdo o en desacuerdo)
-
-2. Le doy importancia a la ciberseguridad. (Acuerdo o en desacuerdo)
-
-3. Conozco las consecuencias de no tener una buena ciberseguridad. (Acuerdo o en desacuerdo)
-
-4. ¿Sabes en que consiste la privacidad digital?
-
-5. ¿Conoces la normativa que regula la privacidad digital en nuestro país?
-
-6. Utilizo buenas prácticas de ciberseguridad en todos los dispositivos que utilizo. (Acuerdo o en desacuerdo)
-
-7. Alguna vez he sido expuesto a algún virus y he sido notificado por mi antivirus?
-
-8. Creo que alguna vez he sido expuesto a algún virus y no ser notificado por mi antivirus?
-
-9. ¿Has sufrido alguna practica de phishing, spam, virus y troyanos, ciberacoso o fraude digital?
-  
-
-19.¿Sientes que tus datos que proporcionas a las empresas son de alguna importancia/utilidad para la empresa? y/n
-
-20. ¿Alguna vez has consultado la información que las redes sociales que utilizas recolectan de ti mientras estas activo en su plataforma? 
-
-21. ¿Alguna vez has consultado la información que las redes sociales que utilizas recolectan de ti mientras estas activo en otra plataforma?  
-
-22. ¿Estarías dispuesto a intercambiar información personal por una mejor experiencia de usuario? - Tendencioso - 
-
-24. Que medidas consideras extremistas al hablar de protección de datos personales:
-
-   - Utilizar contraseñas sugeridas por navegador(comunmente encriptadas y muy largas)
-
-   - Utilizar navegadores con baja latencia para evitar el robo de datos(i.e. Onion routing)
-
-   - Tapar con un tape tu webcam cuando no la quieras utliizar
-
-25. ¿Piensas que existe una manera más efectiva de presentar estás políticas de manera que, puede existir un incremento en el numero de personas que deliberadamente y conscientemente aceptan estas politicas? y/n
-
+### Fuentes
