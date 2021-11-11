@@ -52,8 +52,14 @@ Ya que uno de los integrantes del equipo es de Querétaro y la difundirá con su
  - ¿Del 1 al 5 que tanto te preocupa tu seguridad digital?
     - Escala de 1 a 5
 
-** 2 o 3 preguntas exploratorias **
+ - ¿Sabes en qué consiste la privacidad digital? 
+    - Sí
+    - No
 
+ - ¿Conoces el término de huella digital?
+    - Sí 
+    - No
+ 
 - ¿Cuántos dispositivos con acceso internet tienes?
     - int 
     De esta manera mediremos la vulnerabilidad de cada persona.
@@ -66,11 +72,24 @@ Ya que uno de los integrantes del equipo es de Querétaro y la difundirá con su
     - Otro
     
    Pregunta de paso, si contesta 0 en la anterior, no se realiza
+   
+- Ordena de mayor a menor los tres dispositivos que más usas *Pendiente por checar en base de datos*
+    - Computadora
+    - Tablet
+    - Celular
+    - Smartwatch
+ 
+ - ¿Permites que todas tus aplicaciones accedan a tu cámara, micrófono, ubicación, fotos y rastreo?
+    - Si
+    - No 
+    - Nunca me he fijado
  
 - ¿Cuántos tienen su última actualización? 
     - int 
 - ¿Cuántos de estos dispositivos cuenta con antivirus?
     - int
+
+### Redes sociales
 - ¿Cuántas redes sociales utilizas? 
     - int
 
@@ -91,9 +110,10 @@ En caso de responder 0, la siguiente pregunta no aplicará
 - ¿Has realizado compras en línea?
     - Si 
     - No
-- Al realizar la compra en línea, ¿utilizas una tarjeta digital o alguna plataforma de sistema de pagos en línea (PayPal)?
+- Al realizar compras en línea, ¿utilizas una tarjeta digital o alguna plataforma de sistema de pagos en línea (PayPal)?
     - Sí 
     - No
+ Pregunta de pase 
 - Cuando te registras en algún sitio web, ¿te detienes a leer sus términos y condiciones, o los aceptas sin leerlos?
     - Las reviso detenidamente
     - Las acepto para continuar rápidamente con mi navegación
@@ -145,9 +165,18 @@ Con el fin de observar que tan comunes son estas prácticas en su entorno
 
 Se puede seleccionar más de una. Con esta pregunta obtendremos información de las medidas de seguridad más frecuentes 
 
-- ¿Conoces la facilidad con la que los datos circulan en las redes sociales? ***
-    - Si 
+- ¿Tienes configurado en tu navegador alguna protección de privacidad?
+    - Si
+    - No
+    
+- ¿Verificas si todas los URL de los sitios que visitas inician con https?
+    - Sí
+    - No
+
+- ¿Tienes activada alguna protección contra phishing y malware?
+    - Sí
     - No 
+    - No sé
 
 - ¿Sientes que los datos que proporcionas en la web son de importancia/utilidad para los sitios en los que navegas? 
     - Si
@@ -163,23 +192,8 @@ Se puede seleccionar más de una. Con esta pregunta obtendremos información de 
     - Sí
     - No
     - Me es indiferente
+   
 
-- ¿Tienes configurado en tu navegador alguna protección de privacidad?
-    - Si
-    - No
-    
-- ¿Verificas si todas los URL de los sitios que visitas inician con https?
-    - Sí
-    - No
-
-- ¿Tienes activada la protección de phishing y malware?
-    
-Esta pregunta reafirmaría la anterior
-
-- ¿Permites que todas tus aplicaciones accedan a tu cámara, micrófono, ubicación, fotos y rastreo?
-    - Si
-    - No 
-    - Nunca me he fijado
     
 
 ### Fuentes
