@@ -1,3 +1,9 @@
+# Proyecto final para SocialTIC
+## Equipo 1 
+- Emilio Ramirez
+- Diego Arellano 
+- Fernanda Monter Ortiz *Ingeniería en Computación y Mecatronica*
+- Fernando Lango
 # Objetivos y preguntas
 
 ## Objetivo Principal
