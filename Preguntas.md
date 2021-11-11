@@ -186,7 +186,7 @@ Esta pregunta reafirmaría las anteriores.
     -   Correos solicitando información confidencial de fuentes no autorizadas (contraseñas de redes, información bancaria, entre otros)
     -   Acoso digital (comportamiento que se repite y que busca atemorizar, enfadar o humillar a otras personas)
     -   Fraude digital (uso indebido de datos bancarios y / o información personal para cometer delitos, provocando pérdidas a las víctimas)
-    -   Robo de identidad (datos personales y confidenciales)
+    -   Robo de identidad (hurto de datos personales para cometer fraudes)
     -   Filtrado de información (fotos, conversaciones, datos personales)
     -   Cambios en nuestros dispositivos que no conocemos (infección por virus)
 
