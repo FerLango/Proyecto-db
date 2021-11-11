@@ -46,7 +46,14 @@ Ya que uno de los integrantes del equipo es de Querétaro y la difundirá con su
     - Biológicas y de la salud
     - Sociales
     - Artes y Humanidades
-  
+    
+### Exploratorias
+
+ - ¿Del 1 al 5 que tanto te preocupa tu seguridad digital?
+    - Escala de 1 a 5
+
+** 2 o 3 preguntas exploratorias **
+
 - ¿Cuántos dispositivos con acceso internet tienes?
     - int 
     De esta manera mediremos la vulnerabilidad de cada persona.
@@ -60,11 +67,6 @@ Ya que uno de los integrantes del equipo es de Querétaro y la difundirá con su
     
    Pregunta de paso, si contesta 0 en la anterior, no se realiza
  
- - ¿Del 1 al 5 que tanto te preocupa tu seguridad digital?
-    - Escala de 1 a 5
-
-** 2 o 3 preguntas exploratorias **
-
 - ¿Cuántos tienen su última actualización? 
     - int 
 - ¿Cuántos de estos dispositivos cuenta con antivirus?
@@ -147,17 +149,6 @@ Se puede seleccionar más de una. Con esta pregunta obtendremos información de 
     - Si 
     - No 
 
-- ¿Tienes configurado en tu navegador alguna protección de privacidad?
-    - Si
-    - No
-    
-Esta pregunta reafirmaría la anterior
-
-- ¿Permites que todas tus aplicaciones accedan a tu cámara, micrófono, ubicación, fotos y rastreo?
-    - Si
-    - No 
-    - Nunca me he fijado
-    
 - ¿Sientes que los datos que proporcionas en la web son de importancia/utilidad para los sitios en los que navegas? 
     - Si
     - No
@@ -172,6 +163,24 @@ Esta pregunta reafirmaría la anterior
     - Sí
     - No
     - Me es indiferente
+
+- ¿Tienes configurado en tu navegador alguna protección de privacidad?
+    - Si
+    - No
+    
+- ¿Verificas si todas los URL de los sitios que visitas inician con https?
+    - Sí
+    - No
+
+- ¿Tienes activada la protección de phishing y malware?
+    
+Esta pregunta reafirmaría la anterior
+
+- ¿Permites que todas tus aplicaciones accedan a tu cámara, micrófono, ubicación, fotos y rastreo?
+    - Si
+    - No 
+    - Nunca me he fijado
+    
 
 ### Fuentes
 
