@@ -3,7 +3,7 @@
 - Emilio Ramirez
 - Diego Arellano Zamudio
 
-* Ciencia de Datos * 
+*Ciencia de Datos* 
 - Fernanda Monter Ortiz 
 
 *Ingeniería en Computación y Mecatronica*
