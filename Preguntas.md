@@ -2,7 +2,9 @@
 ## Equipo 1 
 - Emilio Ramirez
 - Diego Arellano 
-- Fernanda Monter Ortiz *Ingeniería en Computación y Mecatronica*
+- Fernanda Monter Ortiz 
+
+*Ingeniería en Computación y Mecatronica*
 - Fernando Lango
 # Objetivos y preguntas
 
