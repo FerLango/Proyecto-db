@@ -51,25 +51,25 @@ Ya que uno de los integrantes del equipo es de Querétaro y la difundirá con su
     
 ### Exploratorias
 
- 6. ¿Del 1 al 5 que tanto te preocupa tu seguridad digital?
+6. ¿Del 1 al 5 que tanto te preocupa tu seguridad digital?
     - Escala de 1 a 5 (Escala de Likert)
 
- 7. ¿Sabes en qué consiste la privacidad digital? 
+7. ¿Sabes en qué consiste la privacidad digital? 
     - Sí
     - No
 
- 8. ¿Conoces el término de huella digital?
+- ¿Conoces el término de huella digital?
     - Sí 
     - No
  
 ### Vulnerabilidad
  
-9. ¿Cuántos dispositivos con acceso internet tienes?
+- ¿Cuántos dispositivos con acceso internet tienes?
     - int 
 
 De esta manera mediremos la vulnerabilidad de cada persona.
     
-10. ¿Cuáles de estos dispositivos tienes? 
+- ¿Cuáles de estos dispositivos tienes? 
     - Computadora
     - Tablet
     - Celular
@@ -78,29 +78,29 @@ De esta manera mediremos la vulnerabilidad de cada persona.
     
 Pregunta de paso, si contesta 0 en la anterior, no se realiza.
    
-11. Ordena de mayor a menor los tres dispositivos que más usas *Pendiente por checar en base de datos*
+- Ordena de mayor a menor los tres dispositivos que más usas *Pendiente por checar en base de datos*
     - Computadora
     - Tablet
     - Celular
     - Smartwatch
 
-12. ¿Permites que todas tus aplicaciones accedan a tu cámara, micrófono, ubicación, fotos y rastreo?
+- ¿Permites que todas tus aplicaciones accedan a tu cámara, micrófono, ubicación, fotos y rastreo?
     - Sí
     - No 
     - Nunca me he fijado
  
-13. ¿Cuántos tienen su última actualización? 
+- ¿Cuántos tienen su última actualización? 
     - int 
 
-14. ¿Cuántos de estos dispositivos cuentan con antivirus?
+- ¿Cuántos de estos dispositivos cuentan con antivirus?
     - int
    
-15. ¿Cuántas redes sociales utilizas? 
+- ¿Cuántas redes sociales utilizas? 
     - int
 
 En caso de responder 0, la siguiente pregunta no aplicará.
 
-16. De las siguientes redes sociales, ¿cuál es la que empleas más?
+- De las siguientes redes sociales, ¿cuál es la que empleas más?
     - Facebook
     - Instagram
     - WhatsApp 
@@ -109,11 +109,11 @@ En caso de responder 0, la siguiente pregunta no aplicará.
     - Ninguna
     - Otra
 
-17. ¿Tienes banca electrónica? 
+- ¿Tienes banca electrónica? 
     - Si
     - No
 
-18. ¿Has realizado compras en línea?
+- ¿Has realizado compras en línea?
     - Si 
     - No
 
@@ -121,36 +121,36 @@ En caso de responder 0, la siguiente pregunta no aplicará.
 
 #### Medidas de prevención ante ataques digitales
 
-19. Al realizar compras en línea, ¿utilizas una tarjeta digital o alguna plataforma de sistema de pagos en línea (PayPal)?
+- Al realizar compras en línea, ¿utilizas una tarjeta digital o alguna plataforma de sistema de pagos en línea (PayPal)?
     - Sí 
     - No
 
  Pregunta de pase 
 
-20. Cuando te registras en algún sitio web, ¿te detienes a leer sus términos y condiciones, o los aceptas sin leerlos?
+- Cuando te registras en algún sitio web, ¿te detienes a leer sus términos y condiciones, o los aceptas sin leerlos?
     - Las reviso detenidamente
     - Las acepto para continuar rápidamente con mi navegación
 
-21. Cuando entras a un sitio web, ¿configuras las cookies, o aceptas el default?
+- Cuando entras a un sitio web, ¿configuras las cookies, o aceptas el default?
     - Las configuro
     - Acepto el default
 
-22. ¿Crees que sería conveniente para el usuario que los términos y condiciones o cookies fueran presentados de una forma más accesible para todo tipo de público?
+- ¿Crees que sería conveniente para el usuario que los términos y condiciones o cookies fueran presentados de una forma más accesible para todo tipo de público?
     - Sí 
     - No
     - Me es indiferente
 
-23. Después de buscar algún artículo en internet, ¿la publicidad que se le muestra en redes sociales corresponde a ese artículo?
+- Después de buscar algún artículo en internet, ¿la publicidad que se le muestra en redes sociales corresponde a ese artículo?
     - Sí
     - No
 
 Esta pregunta reafirmaría las anteriores.
 
-24. ¿Te han llegado cargos que no autorizaste de alguna aplicación con la que estabas en un periodo prueba (ej. Spotify, Netflix, etc.)?
+- ¿Te han llegado cargos que no autorizaste de alguna aplicación con la que estabas en un periodo prueba (ej. Spotify, Netflix, etc.)?
     - Sí 
     - No
 
-25. ¿Has sido víctima de alguno de estos escenarios?
+- ¿Has sido víctima de alguno de estos escenarios?
     - Correos solicitando información confidencial de fuentes no autorizadas
     - Acoso digital
     - Fraude digital
@@ -160,18 +160,18 @@ Esta pregunta reafirmaría las anteriores.
 
 Se puede seleccionar más de una opción.
 
-26. ¿Conoces a alguien que haya sido víctima de estos escenarios?
+- ¿Conoces a alguien que haya sido víctima de estos escenarios?
     - Sí
     - No
 
 Con el fin de observar que tan comunes son estas prácticas en su entorno
 
-27. ¿Crees que lo pudiste haber evitado de alguna manera?
+- ¿Crees que lo pudiste haber evitado de alguna manera?
     - Sí
     - No 
     - No sé
 
-28. Con el fin de proteger tus cuentas de redes sociales, ¿cuáles de las siguientes opciones realizas?
+- Con el fin de proteger tus cuentas de redes sociales, ¿cuáles de las siguientes opciones realizas?
     - Crear una contraseña fuerte (Al menos 8 caracteres, incluyendo mayúsculas, minúsculas, números y caracteres especiales)
     - Cambiar de contraseña frecuentemente 
     - Usar diferentes contraseñas para diferentes cuentas
@@ -186,32 +186,32 @@ Se puede seleccionar más de una. Con esta pregunta obtendremos información de 
 
 #### Medidas de prevención en navegación 
 
-29. ¿Tienes configurado en tu navegador alguna protección de privacidad?
+- ¿Tienes configurado en tu navegador alguna protección de privacidad?
     - Si
     - No
     
-30. ¿Verificas si todas los URL de los sitios que visitas inician con https?
+- ¿Verificas si todas los URL de los sitios que visitas inician con https?
     - Sí
     - No
 
-31. ¿Tienes activada alguna protección contra phishing y malware?
+- ¿Tienes activada alguna protección contra phishing y malware?
     - Sí
     - No 
     - No sé
 
 ### Manejo de información 
 
-32. ¿Sientes que los datos que proporcionas en la web son de importancia/utilidad para los sitios en los que navegas? 
+- ¿Sientes que los datos que proporcionas en la web son de importancia/utilidad para los sitios en los que navegas? 
     - Sí
     - No
     - No sé
 
-33. ¿Crees que las empresas utilizan la información de manera adecuada?
+- ¿Crees que las empresas utilizan la información de manera adecuada?
     - Sí
     - No
     - Me es indiferente
 
-34. ¿Te preocupa que tu información sea utilizada con fines distintos a los que autorizaste?
+- ¿Te preocupa que tu información sea utilizada con fines distintos a los que autorizaste?
     - Sí
     - No
     - Me es indiferente
