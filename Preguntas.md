@@ -24,26 +24,26 @@
 
 Con estas primeras preguntas pretendemos conocer un poco más a nuestra población y filtrar que solamente estudiantes de licenciatura contesten la encuesta.
 
-1. ¿Eres alumno de licenciatura? 
+- ¿Eres alumno de licenciatura? 
     - Si
     - No  
 
 En caso de responder que no, finalizara automáticamente la encuesta. Dentro de nuestro plan de difusión de la encuesta tomaremos todas las medidas necesarias para que transite únicamente entre estudiantes de licenciatura. Sin embargo, ponemos esta pregunta para asegurarnos y tener una encuesta válida para el estudio.
 
-2. ¿Qué edad tienes?
+- ¿Qué edad tienes?
     - int 
 
-3. Género 
+- Género 
     - Masculino
     - Femenino 
     - Otros
 
-4. ¿En qué estado se encuentra ubicada tu Universidad? 
+- ¿En qué estado se encuentra ubicada tu Universidad? 
     - Estados de la República
     
 Ya que uno de los integrantes del equipo es de Querétaro y la difundirá con sus conocidos nos es importante notar esta diferencia y creemos que nos será útil para el análisis tener una visión más amplia. También puede que quienes la contesten por redes no vivan en la CDMX
 
-5. ¿A qué área corresponde tu carrera? 
+- ¿A qué área corresponde tu carrera? 
     - Físico Matemático y de la Ingeniería 
     - Biológicas y de la salud
     - Sociales
@@ -51,10 +51,10 @@ Ya que uno de los integrantes del equipo es de Querétaro y la difundirá con su
     
 ### Exploratorias
 
-6. ¿Del 1 al 5 que tanto te preocupa tu seguridad digital?
+- ¿Del 1 al 5 que tanto te preocupa tu seguridad digital?
     - Escala de 1 a 5 (Escala de Likert)
 
-7. ¿Sabes en qué consiste la privacidad digital? 
+- ¿Sabes en qué consiste la privacidad digital? 
     - Sí
     - No
 
