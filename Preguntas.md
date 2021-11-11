@@ -2,21 +2,21 @@
 
 ## Objetivo Principal
 
-- Conocer la percepción de ciberseguridad entre estudiantes de licenciatura
+- Conocer la percepción de ciberseguridad entre estudiantes de licenciatura.
 
 ## Objetivos específicos 
 
-- Conocer los usos y necesidades de tecnología de la población estudiantil (Redes sociales)
+- Conocer los usos y necesidades de tecnología de la población estudiantil (Redes sociales).
 
-- Estudiar y analizar que tanto se conoce de la ciberseguridad (Ciberseguridad)
+- Estudiar y analizar que tanto se conoce de la ciberseguridad (Ciberseguridad).
 
-- Analizar la percepción de amenazas y ataques digitales (Privacidad y Ciberseguridad)
+- Analizar la percepción de amenazas y ataques digitales (Privacidad y Ciberseguridad).
 
-- Conocer las medidas de seguridad más utilizadas (Privacidad)
+- Conocer las medidas de seguridad más utilizadas (Privacidad).
 
 ## ¿Qué queremos medir?
 
-- La importancia que los estudiantes de licenciatura dan a la ciberseguridad en internet
+- La importancia que los estudiantes de licenciatura dan a la ciberseguridad en internet.
 
 ## Preguntas
 
