@@ -60,6 +60,8 @@ Ya que uno de los integrantes del equipo es de Querétaro y la difundirá con su
     - Sí 
     - No
  
+ ### Vulnerabilidad
+ 
 - ¿Cuántos dispositivos con acceso internet tienes?
     - int 
     De esta manera mediremos la vulnerabilidad de cada persona.
@@ -88,8 +90,7 @@ Ya que uno de los integrantes del equipo es de Querétaro y la difundirá con su
     - int 
 - ¿Cuántos de estos dispositivos cuenta con antivirus?
     - int
-
-### Redes sociales
+   
 - ¿Cuántas redes sociales utilizas? 
     - int
 
@@ -103,13 +104,17 @@ En caso de responder 0, la siguiente pregunta no aplicará
     - TikTok 
     - Ninguna
     - Otra
- 
+
 - ¿Tienes banca electrónica? 
     - Si
     - No
 - ¿Has realizado compras en línea?
     - Si 
     - No
+
+### Medidas de prevención 
+
+#### Medidas de prevención ante ataques digitales
 - Al realizar compras en línea, ¿utilizas una tarjeta digital o alguna plataforma de sistema de pagos en línea (PayPal)?
     - Sí 
     - No
@@ -125,13 +130,12 @@ En caso de responder 0, la siguiente pregunta no aplicará
     - No
     - Me es indiferente
 - Después de buscar algún artículo en internet, ¿la publicidad que se le muestra en redes sociales corresponde a ese artículo?
-    - Si 
+    - Si
     - No
 Esta pregunta reafirmaría las anteriores
 - ¿Te han llegado cargos que no autorizaste de alguna aplicación con la que estabas en un periodo prueba (ej. Spotify, Netflix...)?
     - Si 
     - No
-
 - ¿Has sido víctima de alguno de estos escenarios?
     - Correos solicitando información confidencial de fuentes no autorizadas
     - Acoso digital
@@ -164,7 +168,7 @@ Con el fin de observar que tan comunes son estas prácticas en su entorno
     - Ninguna 
 
 Se puede seleccionar más de una. Con esta pregunta obtendremos información de las medidas de seguridad más frecuentes 
-
+#### Medidas de prevención en navegación 
 - ¿Tienes configurado en tu navegador alguna protección de privacidad?
     - Si
     - No
@@ -178,6 +182,7 @@ Se puede seleccionar más de una. Con esta pregunta obtendremos información de 
     - No 
     - No sé
 
+### Manejo de información 
 - ¿Sientes que los datos que proporcionas en la web son de importancia/utilidad para los sitios en los que navegas? 
     - Si
     - No
