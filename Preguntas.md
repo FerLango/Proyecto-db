@@ -1,13 +1,9 @@
 # Proyecto final para SocialTIC
 ## Equipo 1 
 - Emilio Ramirez
-- Diego Arellano Zamudio
-
-*Ciencia de Datos* 
-- Fernanda Monter Ortiz 
-
-*Ingeniería en Computación y Mecatronica*
-- Fernando Lango
+- Diego Arellano Zamudio - *Ciencia de Datos* 
+- Fernanda Monter Ortiz - *Ingeniería en Computación y Mecatronica*
+- Fernando Lango Baltazar - *Actuaría y Matemáticas Aplicadas*
 
 # Objetivos y preguntas
 
