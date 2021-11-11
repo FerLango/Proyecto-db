@@ -262,4 +262,6 @@ Se puede seleccionar más de una. Con esta pregunta obtendremos información de 
 
 ### Aprobación
 
-![](Aprobaci%C3%B3n/Frida.jpg)
+|                                |                               |
+|--------------------------------|-------------------------------|
+| ![](Aprobaci%C3%B3n/Frida.jpg) | ![](Aprobaci%C3%B3n/Paul.jpg) |
