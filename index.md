@@ -1,3 +1,3 @@
 # Proyecto para la materia de bases de datos
 
-## [Posibles preguntas](/Preguntas.md)
+## [Objetivo y preguntas](/Preguntas.md)
