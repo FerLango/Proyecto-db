@@ -46,10 +46,25 @@ Ya que uno de los integrantes del equipo es de Querétaro y la difundirá con su
     - Biológicas y de la salud
     - Sociales
     - Artes y Humanidades
+  
 - ¿Cuántos dispositivos con acceso internet tienes?
     - int 
+    De esta manera mediremos la vulnerabilidad de cada persona.
+    
+- ¿Cuáles de estos dispositivos tienes? 
+    - Computadora
+    - Tablet
+    - Celular
+    - Smartwatch
+    - Otro
+    
+   Pregunta de paso, si contesta 0 en la anterior, no se realiza
+ 
+ - ¿Del 1 al 5 que tanto te preocupa tu seguridad digital?
+    - Escala de 1 a 5
 
- De esta manera mediremos la vulnerabilidad de cada persona.
+** 2 o 3 preguntas exploratorias **
+
 - ¿Cuántos tienen su última actualización? 
     - int 
 - ¿Cuántos de estos dispositivos cuenta con antivirus?
@@ -74,6 +89,9 @@ En caso de responder 0, la siguiente pregunta no aplicará
 - ¿Has realizado compras en línea?
     - Si 
     - No
+- Al realizar la compra en línea, ¿utilizas una tarjeta digital o alguna plataforma de sistema de pagos en línea (PayPal)?
+    - Sí 
+    - No
 - Cuando te registras en algún sitio web, ¿te detienes a leer sus términos y condiciones, o los aceptas sin leerlos?
     - Las reviso detenidamente
     - Las acepto para continuar rápidamente con mi navegación
@@ -92,23 +110,22 @@ Esta pregunta reafirmaría las anteriores
     - Si 
     - No
 
-- ¿Del 1 al 5 que tanto te preocupa tu seguridad digital?
-    - Escala de 1 a 5
-- ¿Has sufrido alguna de las siguientes prácticas?
+- ¿Has sido víctima de alguno de estos escenarios?
     - Correos solicitando información confidencial de fuentes no autorizadas
     - Acoso digital
     - Fraude digital
     - Robo de identidad
-    - Cambios en nuestros dispositivos que no conocemos
+    - Filtrado de información
+    - Cambios en nuestros dispositivos que no conocemos (infección por virus)
 
 Se puede seleccionar más de una opción
-- ¿Conoces a alguien que haya sufrido alguna de estas prácticas?
+- ¿Conoces a alguien que haya sufrido alguna de estos escenarios?
     - Si
     - No
 
 Con el fin de observar que tan comunes son estas prácticas en su entorno
 
-- ¿Crees que la configuración de seguridad en tus dispositivos tuvo algo que ver?
+- ¿Crees que lo pudiste haber evitado de alguna manera?
     - Si
     - No 
     - No sé
@@ -119,18 +136,21 @@ Con el fin de observar que tan comunes son estas prácticas en su entorno
     - Usar diferentes contraseñas para diferentes cuentas
     - Evitar acceder a tus redes sociales en computadoras públicas
     - Evitar acceder a tus redes sociales utilizando conexiones inalámbricas públicas 
-    - Tener cuidado con enlaces que te han enviado 
+    - Tener cuidado con enlaces que te han enviado
+    - Utilizar verificación de dos pasos
+    - Ulilizar un gestor de contraseñas 
     - Ninguna 
 
 Se puede seleccionar más de una. Con esta pregunta obtendremos información de las medidas de seguridad más frecuentes 
 
-- ¿Conoces la facilidad con la que los datos circulan en las redes sociales?
+- ¿Conoces la facilidad con la que los datos circulan en las redes sociales? ***
     - Si 
     - No 
+
 - ¿Tienes configurado en tu navegador alguna protección de privacidad?
     - Si
     - No
-
+    
 Esta pregunta reafirmaría la anterior
 
 - ¿Permites que todas tus aplicaciones accedan a tu cámara, micrófono, ubicación, fotos y rastreo?
@@ -142,6 +162,16 @@ Esta pregunta reafirmaría la anterior
     - Si
     - No
     - No sé
+
+- ¿Crees que las empresas utilizan la información de manera adecuada?
+    - Sí
+    - No
+    - Me es indiferente
+
+- ¿Te preocupa que tu información sea utilizada con fines distintos a los que autorizaste?
+    - Sí
+    - No
+    - Me es indiferente
 
 ### Fuentes
 
