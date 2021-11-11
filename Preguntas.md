@@ -199,8 +199,6 @@ Se puede seleccionar más de una. Con esta pregunta obtendremos información de 
     - Me es indiferente
    
 
-    
-
 ### Fuentes
 
 - Blog de Protección de Datos, Grupo Atico34
