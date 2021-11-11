@@ -62,7 +62,7 @@ Ya que uno de los integrantes del equipo es de Querétaro y la difundirá con su
     - Sí 
     - No
  
- ### Vulnerabilidad
+### Vulnerabilidad
  
 9. ¿Cuántos dispositivos con acceso internet tienes?
     - int 
