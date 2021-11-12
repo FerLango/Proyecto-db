@@ -268,8 +268,7 @@ Se puede seleccionar más de una. Con esta pregunta obtendremos información de 
 -   Principales problemas de seguridad en las redes sociales en la actualidad, la utilizamos para la pregunta de si el ecnuestado ha sido víctima de algún escenario que comprometiera su seguridad en línea. [Key Social Media Issues for 2020, Tulane University](https://sopa.tulane.edu/blog/key-social-media-privacy-issues-2020)
 
 ### Aprobación
-Primera reunón: 8 de noviembre
-Segunda reunión: 10 de noviembre
+Primera reunón: 8 de noviembre. Segunda reunión: 10 de noviembre
 |                                |                               |
 |--------------------------------|-------------------------------|
 | ![](Aprobaci%C3%B3n/Frida.jpg) | ![](Aprobaci%C3%B3n/Paul.jpg) |
