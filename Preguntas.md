@@ -1,10 +1,3 @@
-# Proyecto final para SocialTIC
-## Equipo 1 
-- Emilio Ramírez González - *Ciencia de Datos y Economía*
-- Diego Arellano Zamudio - *Ciencia de Datos* 
-- Fernanda Monter Ortiz - *Ingeniería en Computación y Mecatronica*
-- Fernando Lango Baltazar - *Actuaría y Matemáticas Aplicadas*
-
 # Objetivos y preguntas
 
 ## Objetivo Principal
@@ -263,9 +256,9 @@ Se puede seleccionar más de una. Con esta pregunta obtendremos información de 
 
 -   [Guía sobre la privacidad digital, Grupo Atico34](https://protecciondatos-lopd.com/empresas/privacidad-digital/)
 
--   Medidas recomendadas para la protección de cuentas de redes sociales, la utliizamos para las opciones en donde se le pregunta al encuestado lo que realiza para proteger sus cuentas. [Protect Your Social Media Accounts, U.S. securities and exchange commission](https://www.investor.gov/protect-your-investments/fraud/how-avoid-fraud/protect-your-social-media-accounts)
+-   [Medidas para proteger cuentas de redes sociales, U.S. securities and exchange commission](https://www.investor.gov/protect-your-investments/fraud/how-avoid-fraud/protect-your-social-media-accounts)
 
--   Principales problemas de seguridad en las redes sociales en la actualidad, la utilizamos para la pregunta de si el ecnuestado ha sido víctima de algún escenario que comprometiera su seguridad en línea. [Key Social Media Issues for 2020, Tulane University](https://sopa.tulane.edu/blog/key-social-media-privacy-issues-2020)
+-   [Principales problemas de privacidad en las redes sociales, Tulane University](https://sopa.tulane.edu/blog/key-social-media-privacy-issues-2020)
 
 ### Aprobación
 
