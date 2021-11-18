@@ -1,5 +1,6 @@
 create table respuestas(
-	temporal timestamp ,
+	id numeric (3),
+	temporal timestamp,
 	licenciatura varchar(2),
 	edad numeric(3),
 	genero varchar(9),
@@ -7,7 +8,7 @@ create table respuestas(
 	areas varchar(37),
 	seguridad numeric(1),
 	privacidad varchar(2),
-	huella varchar(2)
+	huella varchar(2),
 	dispositivos numeric(2),
 	dispositivos_cantidad varchar(47),
 	ordena_compu varchar(7),
@@ -45,5 +46,7 @@ create table respuestas(
 	datos varchar(5),
 	empresas varchar(18),
 	preocupacion_empresas varchar(18),
-	username varchar(30),
-)
+	username varchar(30)
+);
+
+copy respuestas from 'C:\Users\Public\data_temp.csv' with (format csv);
