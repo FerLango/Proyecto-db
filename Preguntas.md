@@ -176,11 +176,11 @@ Esta pregunta reafirmaría las anteriores.
 
 -   ¿Has sido víctima de alguno de estos escenarios?
 
-    -   Correos solicitando información confidencial de fuentes no autorizadas
-    -   Acoso digital
-    -   Fraude digital
-    -   Robo de identidad
-    -   Filtrado de información
+    -   Correos solicitando información confidencial de fuentes no autorizadas (contraseñas de redes, información bancaria, entre otros)
+    -   Acoso digital (comportamiento que se repite y que busca atemorizar, enfadar o humillar a otras personas)
+    -   Fraude digital (uso indebido de datos bancarios y / o información personal para cometer delitos, provocando pérdidas a las víctimas)
+    -   Robo de identidad (hurto de datos personales para cometer fraudes)
+    -   Filtrado de información (fotos, conversaciones, datos personales)
     -   Cambios en nuestros dispositivos que no conocemos (infección por virus)
 
 Se puede seleccionar más de una opción.
@@ -252,16 +252,16 @@ Se puede seleccionar más de una. Con esta pregunta obtendremos información de 
 
 ### Fuentes
 
--   [Blog de Protección de Datos, Grupo Atico34](https://protecciondatos-lopd.com/empresas/nueva-ley-proteccion-datos-2018/)
+-   Dentro del articulo encontramos información muy relevante de la normativa que se tiene para resguardar nuestros datos en la red, asi como los ataques que pueden llegar a ocurrir. Esto nos ayudo a poder formular con un mayor contexto las preguntas relacionadas a ataques ciberneticos y a la bueno o mala practica de información que tienen las empresas. [Ley de Protección de Datos y Garantía de Derechos Digitales (LOPDGDD) 2018, Grupo Atico34](https://protecciondatos-lopd.com/empresas/nueva-ley-proteccion-datos-2018/)
 
--   [Guía sobre la privacidad digital, Grupo Atico34](https://protecciondatos-lopd.com/empresas/privacidad-digital/)
+-   Ofrece un amplio contenido sobre la privacidad digital (características, ventajas y desventajas), algunos casos practicos y preguntas frecuentes que nos facilitaron el planteamiento de las preguntas relacionadas con el tema. [Guía sobre la privacidad digital, Grupo Atico34](https://protecciondatos-lopd.com/empresas/privacidad-digital/)
 
 -   [Medidas para proteger cuentas de redes sociales, U.S. securities and exchange commission](https://www.investor.gov/protect-your-investments/fraud/how-avoid-fraud/protect-your-social-media-accounts)
 
 -   [Principales problemas de privacidad en las redes sociales, Tulane University](https://sopa.tulane.edu/blog/key-social-media-privacy-issues-2020)
 
 ### Aprobación
-
+Primera reunón: 8 de noviembre. Segunda reunión: 10 de noviembre
 |                                |                               |
 |--------------------------------|-------------------------------|
 | ![](Aprobaci%C3%B3n/Frida.jpg) | ![](Aprobaci%C3%B3n/Paul.jpg) |
