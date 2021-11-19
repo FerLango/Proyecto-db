@@ -144,8 +144,6 @@ En caso de responder 0, la siguiente pregunta no aplicará.
     -   Sí
     -   No
 
-Pregunta de pase
-
 -   Cuando te registras en algún sitio web, ¿te detienes a leer sus términos y condiciones, o los aceptas sin leerlos?
 
     -   Las reviso detenidamente
