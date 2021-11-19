@@ -134,6 +134,7 @@ En caso de responder 0, la siguiente pregunta no aplicará.
 
     -   Si
     -   No
+Paso
 
 ### Medidas de prevención
 
