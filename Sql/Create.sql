@@ -1,3 +1,24 @@
+create table demograficos(
+	id int4 primary key,
+	temporal timestamptz,
+	licenciatura text,
+	edad float8, 
+	genero text,
+	estado text,
+	areas text
+)
+
+
+
+
+
+
+
+
+
+
+
+/*
 create table respuestas(
 	id numeric (3),
 	temporal timestamp,

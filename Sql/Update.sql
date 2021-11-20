@@ -1,3 +1,5 @@
+
+/*
 delete from respuestas
 where temporal is null;
 
@@ -14,7 +16,7 @@ update respuestas
 set dispositivos_cantidad = null 
 where dispositivos_cantidad = ' ';
 
-
+*/
 --------------------------------------------------------------------
 /*
 
