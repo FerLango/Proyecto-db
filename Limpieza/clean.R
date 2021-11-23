@@ -38,13 +38,16 @@ data<-
 demograficos <-
     data %>%
     select(id, temporal, licenciatura, edad, genero, estado, areas) %>%
-    distinct(id, .keep_all = T)
+    distinct(id, .keep_all = T) %>%
+    rename(id_demograficos = id)
 
 #Exploratorias
 exploratorias <-
     data %>%
     select(id, seguridad, privacidad, huella) %>%
-    distinct(id, .keep_all = T)
+    distinct(id, .keep_all = T) %>%
+    rename(id_demograficos = id)
+exploratorias$id_exploratorias <- 1:nrow(exploratorias)
 
 #Vulnerabilidad
 vulnerabilidad <- 
@@ -52,12 +55,16 @@ vulnerabilidad <-
     select(id, dispositivos, ordena_compu,  ordena_tablet, ordena_celular,
            ordena_smart, ordena_otro, configuracion, antivirus, 
            actualizacion) %>% 
-    distinct(id, .keep_all = T)
+    distinct(id, .keep_all = T) %>%
+    rename(id_vulnerabilidad = id)
+vulnerabilidad$id_vulnerabilidad <- 1:nrow(vulnerabilidad)
 
 dispositivos_cuales <-
     data %>%
     select(id, dispositivos_cantidad) %>%
-    distinct(id,dispositivos_cantidad)
+    distinct(id,dispositivos_cantidad) %>%
+    rename(id_demograficos = id)
+dispositivos_cuales$id_dispositivos_cuales <- 1:nrow(dispositivos_cuales)
 
 #Redes sociales
 redes_sociales <-
@@ -66,11 +73,13 @@ redes_sociales <-
            ordena_whatsapp, ordena_twitter, ordena_tiktok, ordena_ninguna,
            ordena_otra) %>%
     distinct(id, .keep_all = T)
+redes_sociales$id_redes_sociales <- 1:nrow(redes_sociales)
 
 sociales_cuales <-
     data %>%
     select(id, sociales_cuales) %>%
     distinct(id, sociales_cuales)
+sociales_cuales$id_sociales_cuales <- 1:nrow(sociales_cuales)
 
 #Prevención digitales
 prevencion_digital <-
@@ -78,28 +87,33 @@ prevencion_digital <-
     select(id, banca, compras_online, paypal, term_cond, cookies,
            cookies_accesibles, publicidad, cargos, con_victima, evitado) %>%
     distinct(id, .keep_all = T)
+prevencion_digital$id_prevencion_digital <- 1:nrow(prevencion_digital)
 
 victima <-
     data %>%
     select(id, victima) %>%
     distinct(id, victima)
+victima$id_victima <- 1:nrow(victima)
 
 proteccion <-
     data %>%
     select(id, proteccion) %>%
     distinct(id, proteccion)
+proteccion$id_proteccion <- 1:nrow(proteccion)
 
 #Prevencion navegacion
 prevencion_navegacion <-
     data %>%
     select(id, navegador, url, phishing) %>%
     distinct(id, .keep_all = T)
+prevencion_navegacion$id_prevencion_navegacion <- 1:nrow(prevencion_navegacion)
 
 #Manejo informacion
 manejo_info <-
     data %>%
     select(id, datos, empresas, preocupacion_empresas, username) %>%
     distinct(id, .keep_all = T)
+manejo_info$id_manejo_info <- 1:nrow(manejo_info)
 
 #DB connection
 library(RPostgreSQL)
@@ -114,8 +128,6 @@ db <- dbConnect(driver,
                 port=5432,
                 user="admin",
                 password = getPass("Password:"))
-
-max(dbReadTable(db,"demograficos")$id)
 
 dbWriteTable(db, "demograficos", demograficos, row.names=F, append=T)
 
@@ -137,7 +149,7 @@ dbDisconnect(db)
 
 
 demograficos2[(max(dbReadTable(db,"demograficos")$id)+1):nrow(demograficos2),]
-
+max(dbReadTable(db,"demograficos")$id)
 
 
 

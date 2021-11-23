@@ -1,5 +1,5 @@
 create table demograficos(
-	id_demograficos int4 primary key,
+	id_demograficos int4 constraint pk_demograficos primary key,
 	temporal timestamptz,
 	licenciatura text,
 	edad float8, 
@@ -8,16 +8,32 @@ create table demograficos(
 	areas text
 );
 
-create table dispositivos_cuales (
-	id_dispositivos_cuales int4 primary key,
-	dispositivos_cantidad text
-);
-
 create table exploratorias (
-	id_exploratorias int4 primary key,
+	id_exploratorias int4 constraint pk_exploratorias primary key,
+	id_demograficos int4 references demograficos (id_demograficos) not null,
 	seguridad float8,
 	privacidad text,
 	huella text
+);
+
+create table vulnerabilidad(
+	id_vulnerabilidad int4 constraint pk_vulnerabilidad primary key, 
+	id_demograficos int4 references demograficos (id_demograficos) not null,
+	dispositivos float8, 
+	ordena_compu text, 
+	ordena_tablet text, 
+	ordena_celular text, 
+	ordena_smart text, 
+	ordena_otro bool, 
+	configuracion text, 
+	antivirus float8, 
+	actualizacion float8
+);
+
+create table dispositivos_cuales (
+	id_dispositivos_cuales int4 constraint pk_dispositivos_cuales primary key,
+	id_demograficos int4 references vulnerabilidad (id_vulnerabilidad) not null, 
+	dispositivos_cantidad text
 );
 
 create table manejo_info (
@@ -72,15 +88,4 @@ create table victima(
 	id_victima int4 primary key, 
 	victima text
 );
-create table vulnerabilidad(
-	id_vulnerabilidad int4 primary key, 
-	dispositivos float8, 
-	ordena_compu text, 
-	ordena_tablet text, 
-	ordena_celular text, 
-	ordena_smart text, 
-	ordena_otro bool, 
-	configuracion text, 
-	antivirus float8, 
-	actualizacion float8
-);
+
