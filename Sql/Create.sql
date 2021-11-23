@@ -1,5 +1,5 @@
 create table demograficos(
-	id int4 primary key,
+	id_demograficos int4 primary key,
 	temporal timestamptz,
 	licenciatura text,
 	edad float8, 
@@ -8,22 +8,20 @@ create table demograficos(
 	areas text
 );
 
+create table dispositivos_cuales (
+	id_dispositivos_cuales int4 primary key,
+	dispositivos_cantidad text
+);
+
 create table exploratorias (
-	id int4 primary key references demograficos (id),
+	id_exploratorias int4 primary key,
 	seguridad float8,
 	privacidad text,
 	huella text
 );
 
-create table dispositivos_cuales (
-	id int4 primary key,
-	dispositivos_cantidad text
-);
-
-
-
 create table manejo_info (
-	id int4 primary key,
+id_manejo_info int4 primary key,
 	datos text,
 	empresas text,
 	preocupacion_empresas text,
@@ -31,7 +29,7 @@ create table manejo_info (
 );
 
 create table prevencion_digital (
-	id int4 primary key,
+id_prevencion_digital int4 primary key,
 	banca text,
 	compras_online text,
 	paypal text,
@@ -45,19 +43,18 @@ create table prevencion_digital (
 );
 
 create table prevencion_navegacion (
-	id int4 primary key,
+id_prevencion_navegacion int4 primary key,
 	navegador text,
 	url text,
 	phishing text
 );
 
 create table proteccion(
-	id int4 primary key, 
+	id_proteccion int4 primary key, 
 	proteccion text 
 );
-
 create table redes_sociales (
-	id int4 primary key, 
+	id_redes_sociales int4 primary key, 
 	sociales_contar float8, 
 	ordena_facebook text, 
 	ordena_instagram text, 
@@ -67,19 +64,16 @@ create table redes_sociales (
 	ordena_ninguna text, 
 	ordena_otra bool
 );
-
 create table sociales_cuales(
-	id int4 primary key, 
+	id_sociales_cuales int4 primary key, 
 	sociales_cuales text
 );
-
 create table victima( 
-	id int4 primary key, 
+	id_victima int4 primary key, 
 	victima text
 );
-
 create table vulnerabilidad(
-	id int4 primary key, 
+	id_vulnerabilidad int4 primary key, 
 	dispositivos float8, 
 	ordena_compu text, 
 	ordena_tablet text, 
@@ -90,6 +84,3 @@ create table vulnerabilidad(
 	antivirus float8, 
 	actualizacion float8
 );
-
-
-
