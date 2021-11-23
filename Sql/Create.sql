@@ -32,19 +32,12 @@ create table vulnerabilidad(
 
 create table dispositivos_cuales (
 	id_dispositivos_cuales int4 constraint pk_dispositivos_cuales primary key,
-	id_demograficos int4 references vulnerabilidad (id_vulnerabilidad) not null, 
+	id_vulnerabilidad int4 references vulnerabilidad (id_vulnerabilidad) not null, 
 	dispositivos_cantidad text
-);
-create table exploratorias (
-	id_exploratorias int4 primary key,
-	id_demograficos int4 references demograficos (id_demograficos) not null,
-	seguridad float8,
-	privacidad text,
-	huella text
 );
 
 create table manejo_info (
-	id_manejo_info int4 primary key,
+	id_manejo_info int4 constraint pk_manejo_info primary key,
 	id_demograficos int4 references demograficos (id_demograficos) not null,
 	datos text,
 	empresas text,
@@ -53,7 +46,7 @@ create table manejo_info (
 );
 
 create table prevencion_digital (
-	id_prevencion_digital int4 primary key,
+	id_prevencion_digital int4 constraint pk_prevencion_digital primary key,
 	id_demograficos int4 references demograficos (id_demograficos) not null,
 	banca text,
 	compras_online text,
@@ -77,13 +70,13 @@ create table prevencion_navegacion (
 
 create table proteccion(
 	id_proteccion int4 constraint pk_proteccion primary key, 
-	id_prevencion_navegacion int4 references prevencion_navegacion (id_prevencion_navegacion) not null,
+	id_prevencion_digital int4 references prevencion_digital (id_prevencion_digital) not null,
 	proteccion text 
 );
 
 create table victima( 
 	id_victima int4 constraint pk_victima primary key, 
-	id_prevencion_navegacion int4 references prevencion_navegacion (id_prevencion_navegacion) not null,
+	id_prevencion_digital int4 references prevencion_digital (id_prevencion_digital) not null,
 	victima text
 );
 create table redes_sociales (
@@ -92,14 +85,15 @@ create table redes_sociales (
 	sociales_contar float8, 
 	ordena_facebook text, 
 	ordena_instagram text, 
-	ordena_whatsapp bool, 
+	ordena_whatsapp text, 
 	ordena_twitter text, 
-	ordena_tiktok bool, 
+	ordena_tiktok text, 
 	ordena_ninguna text, 
-	ordena_otra bool
+	ordena_otra text
 );
 create table sociales_cuales(
-	id_sociales_cuales int4 constraint pk_sociales_cuales  primary key, 
+	id_sociales_cuales int4 constraint pk_sociales_cuales primary key, 
 	id_redes_sociales int4 references redes_sociales (id_redes_sociales) not null,
 	sociales_cuales text
 );
+

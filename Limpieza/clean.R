@@ -1,7 +1,7 @@
 library(googlesheets4)
 library(tidyverse)
 
-url <- "https://docs.google.com/spreadsheets/d/1pKO-J9Ud8pGiOzbnFFpj7FYusXwzu53IDrDqYqPtjlY/edit?resourcekey#gid=857297717"
+url <- "https://docs.google.com/spreadsheets/d/1i2dDrX_CpXSx22tlPQQna0i86_vde7dnO1bq7phQEFE/edit?resourcekey&usp=forms_web_b#gid=51359133"
 data <- read_sheet(url, col_names = F, skip = 1)
 
 #Nombres
@@ -56,14 +56,14 @@ vulnerabilidad <-
            ordena_smart, ordena_otro, configuracion, antivirus, 
            actualizacion) %>% 
     distinct(id, .keep_all = T) %>%
-    rename(id_vulnerabilidad = id)
+    rename(id_demograficos = id)
 vulnerabilidad$id_vulnerabilidad <- 1:nrow(vulnerabilidad)
 
 dispositivos_cuales <-
     data %>%
     select(id, dispositivos_cantidad) %>%
     distinct(id,dispositivos_cantidad) %>%
-    rename(id_demograficos = id)
+    rename(id_vulnerabilidad = id)
 dispositivos_cuales$id_dispositivos_cuales <- 1:nrow(dispositivos_cuales)
 
 #Redes sociales
@@ -72,13 +72,15 @@ redes_sociales <-
     select(id, sociales_contar, ordena_facebook, ordena_instagram, 
            ordena_whatsapp, ordena_twitter, ordena_tiktok, ordena_ninguna,
            ordena_otra) %>%
-    distinct(id, .keep_all = T)
+    distinct(id, .keep_all = T) %>%
+    rename(id_demograficos = id)
 redes_sociales$id_redes_sociales <- 1:nrow(redes_sociales)
 
 sociales_cuales <-
     data %>%
     select(id, sociales_cuales) %>%
-    distinct(id, sociales_cuales)
+    distinct(id, sociales_cuales) %>%
+    rename(id_redes_sociales = id)
 sociales_cuales$id_sociales_cuales <- 1:nrow(sociales_cuales)
 
 #Prevención digitales
@@ -86,33 +88,38 @@ prevencion_digital <-
     data %>%
     select(id, banca, compras_online, paypal, term_cond, cookies,
            cookies_accesibles, publicidad, cargos, con_victima, evitado) %>%
-    distinct(id, .keep_all = T)
+    distinct(id, .keep_all = T) %>%
+    rename(id_demograficos = id)
 prevencion_digital$id_prevencion_digital <- 1:nrow(prevencion_digital)
 
 victima <-
     data %>%
     select(id, victima) %>%
-    distinct(id, victima)
+    distinct(id, victima) %>%
+    rename(id_prevencion_digital = id)
 victima$id_victima <- 1:nrow(victima)
 
 proteccion <-
     data %>%
     select(id, proteccion) %>%
-    distinct(id, proteccion)
+    distinct(id, proteccion) %>%
+    rename(id_prevencion_digital = id)
 proteccion$id_proteccion <- 1:nrow(proteccion)
 
 #Prevencion navegacion
 prevencion_navegacion <-
     data %>%
     select(id, navegador, url, phishing) %>%
-    distinct(id, .keep_all = T)
+    distinct(id, .keep_all = T) %>%
+    rename(id_demograficos = id)
 prevencion_navegacion$id_prevencion_navegacion <- 1:nrow(prevencion_navegacion)
 
 #Manejo informacion
 manejo_info <-
     data %>%
     select(id, datos, empresas, preocupacion_empresas, username) %>%
-    distinct(id, .keep_all = T)
+    distinct(id, .keep_all = T) %>%
+    rename(id_demograficos = id)
 manejo_info$id_manejo_info <- 1:nrow(manejo_info)
 
 #DB connection
@@ -129,27 +136,59 @@ db <- dbConnect(driver,
                 user="admin",
                 password = getPass("Password:"))
 
-dbWriteTable(db, "demograficos", demograficos, row.names=F, append=T)
+if (length(dbReadTable(db,"demograficos")$id) == 0) {
+    rows <- 0
+} else {
+    rows <- max(dbReadTable(db,"demograficos")$id)
+}
 
-########################################################################
-dbWriteTable(db, "demograficos", demograficos, overwrite=T, row.names=F)
-dbWriteTable(db, "exploratorias", exploratorias, overwrite=T, row.names=F)
-dbWriteTable(db, "vulnerabilidad", vulnerabilidad, overwrite=T, row.names=F)
-dbWriteTable(db, "dispositivos_cuales", dispositivos_cuales, overwrite=T, row.names=F)
-dbWriteTable(db, "redes_sociales", redes_sociales, overwrite=T, row.names=F)
-dbWriteTable(db, "sociales_cuales", sociales_cuales, overwrite=T, row.names=F)
-dbWriteTable(db, "prevencion_digital", prevencion_digital, overwrite=T, row.names=F)
-dbWriteTable(db, "victima", victima, overwrite=T, row.names=F)
-dbWriteTable(db, "proteccion", proteccion, overwrite=T, row.names=F)
-dbWriteTable(db, "prevencion_navegacion", prevencion_navegacion, overwrite=T, row.names=F)
-dbWriteTable(db, "manejo_info", manejo_info, overwrite=T, row.names=F)
+fun <- 
+    function(table){
+        if (length(dbReadTable(db,table)[,paste0("id_",table)]) == 0) {
+            return(1)
+        } else {
+            return(max(dbReadTable(db,table)[,paste0("id_",table)])+1)
+        }
+    }
+
+if (rows != max(data$id)) {
+    dbWriteTable(db, "demograficos", 
+                 demograficos[fun("demograficos"):nrow(demograficos),], 
+                 append=T, row.names=F)
+    dbWriteTable(db, "exploratorias", 
+                 exploratorias[fun("exploratorias"):nrow(exploratorias),],
+                 append=T, row.names=F)
+    dbWriteTable(db, "vulnerabilidad", 
+                 vulnerabilidad[fun("vulnerabilidad"):nrow(vulnerabilidad),],
+                 append=T, row.names=F)
+    dbWriteTable(db, "dispositivos_cuales", 
+                 dispositivos_cuales[fun("dispositivos_cuales"):nrow(dispositivos_cuales),], 
+                 append=T, row.names=F)
+    dbWriteTable(db, "redes_sociales", 
+                 redes_sociales[fun("redes_sociales"):nrow(redes_sociales),], 
+                 append=T, row.names=F)
+    dbWriteTable(db, "sociales_cuales", 
+                 sociales_cuales[fun("sociales_cuales"):nrow(sociales_cuales),], 
+                 append=T, row.names=F)
+    dbWriteTable(db, "prevencion_digital", 
+                 prevencion_digital[fun("prevencion_digital"):nrow(prevencion_digital),], 
+                 append=T, row.names=F)
+    dbWriteTable(db, "victima", 
+                 victima[fun("victima"):nrow(victima),],
+                 append=T, row.names=F)
+    dbWriteTable(db, "proteccion", 
+                 proteccion[fun("proteccion"):nrow(proteccion),], 
+                 append=T, row.names=F)
+    dbWriteTable(db, "prevencion_navegacion", 
+                 prevencion_navegacion[fun("prevencion_navegacion"):nrow(prevencion_navegacion),],
+                 append=T, row.names=F)
+    dbWriteTable(db, "manejo_info", 
+                 manejo_info[fun("manejo_info"):nrow(manejo_info),], 
+                 append=T, row.names=F)
+}
 
 dbDisconnect(db)
 
-
-
-demograficos2[(max(dbReadTable(db,"demograficos")$id)+1):nrow(demograficos2),]
-max(dbReadTable(db,"demograficos")$id)
 
 
 
