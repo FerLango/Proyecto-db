@@ -1,7 +1,7 @@
 -- Delete data
 
 DELETE FROM demograficos;
-DELETE FROM dispositivos_cuales ;
+DELETE FROM dispositivos_cuales;
 DELETE FROM exploratorias ;
 DELETE FROM manejo_info ;
 DELETE FROM prevencion_digital ;
