@@ -2,6 +2,6 @@
 
 ## [Objetivo y preguntas](/Preguntas.md)
 
-## [Presentación de datos](/Datos_presentación/Index.html)
+## [Presentación de datos](/Datos_presentación/index.html)
 
 ## [Cuestionario]()
