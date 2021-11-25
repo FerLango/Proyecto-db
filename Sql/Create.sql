@@ -24,7 +24,7 @@ create table vulnerabilidad(
 	ordena_tablet text, 
 	ordena_celular text, 
 	ordena_smart text, 
-	ordena_otro bool, 
+	ordena_otro text, 
 	configuracion text, 
 	antivirus float8, 
 	actualizacion float8

@@ -151,7 +151,7 @@ fun <-
         }
     }
 
-if (rows != max(data$id)) {
+if (rows != (max(data$id)-1)) {
     dbWriteTable(db, "demograficos", 
                  demograficos[fun("demograficos"):nrow(demograficos),], 
                  append=T, row.names=F)
