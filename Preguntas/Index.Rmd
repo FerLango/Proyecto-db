@@ -1,4 +1,21 @@
-# Objetivos y preguntas
+---
+title: "Ciberseguridad en estudiantes de licenciatura"
+subtitle: "Objetivos y preguntas"
+author: "Equipo 1: Diego Arellano, Emilio Ramírez, Fernanda Monter,   Fernando Lango"
+date: "`r format(Sys.time(), '%d/%m/%Y')`"
+output: 
+    prettydoc::html_pretty:
+        theme: cayman
+        highlight: github
+        number_sections: true
+        toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Objetivos
 
 ## Objetivo Principal
 
@@ -18,9 +35,9 @@
 
 -   La importancia que los estudiantes de licenciatura dan a la ciberseguridad en internet.
 
-## Preguntas
+# Preguntas
 
-### Demografía
+## Demografía
 
 Con estas primeras preguntas pretendemos conocer un poco más a nuestra población y filtrar que solamente estudiantes de licenciatura contesten la encuesta.
 
@@ -54,7 +71,7 @@ Ya que uno de los integrantes del equipo es de Querétaro y la difundirá con su
     -   Sociales
     -   Artes y Humanidades
 
-### Exploratorias
+## Exploratorias
 
 -   ¿Del 1 al 5 que tanto te preocupa tu seguridad digital?
 
@@ -70,7 +87,7 @@ Ya que uno de los integrantes del equipo es de Querétaro y la difundirá con su
     -   Sí
     -   No
 
-### Vulnerabilidad
+## Vulnerabilidad
 
 -   ¿Cuántos dispositivos con acceso internet tienes?
 
@@ -133,12 +150,11 @@ En caso de responder 0, la siguiente pregunta no aplicará.
 -   ¿Has realizado compras en línea?
 
     -   Si
-    -   No
-Paso
+    -   No Paso
 
-### Medidas de prevención
+## Medidas de prevención
 
-#### Medidas de prevención ante ataques digitales
+### Medidas de prevención ante ataques digitales
 
 -   Al realizar compras en línea, ¿utilizas una tarjeta digital o alguna plataforma de sistema de pagos en línea (PayPal)?
 
@@ -211,7 +227,7 @@ Con el fin de observar que tan comunes son estas prácticas en su entorno
 
 Se puede seleccionar más de una. Con esta pregunta obtendremos información de las medidas de seguridad más frecuentes.
 
-#### Medidas de prevención en navegación
+### Medidas de prevención en navegación
 
 -   ¿Tienes configurado en tu navegador alguna protección de privacidad?
 
@@ -229,7 +245,7 @@ Se puede seleccionar más de una. Con esta pregunta obtendremos información de 
     -   No
     -   No sé
 
-### Manejo de información
+## Manejo de información
 
 -   ¿Sientes que los datos que proporcionas en la web son de importancia/utilidad para los sitios en los que navegas?
 
@@ -249,7 +265,7 @@ Se puede seleccionar más de una. Con esta pregunta obtendremos información de 
     -   No
     -   Me es indiferente
 
-### Fuentes
+# Fuentes
 
 -   Dentro del articulo encontramos información muy relevante de la normativa que se tiene para resguardar nuestros datos en la red, asi como los ataques que pueden llegar a ocurrir. Esto nos ayudo a poder formular con un mayor contexto las preguntas relacionadas a ataques ciberneticos y a la bueno o mala practica de información que tienen las empresas. [Ley de Protección de Datos y Garantía de Derechos Digitales (LOPDGDD) 2018, Grupo Atico34](https://protecciondatos-lopd.com/empresas/nueva-ley-proteccion-datos-2018/)
 
@@ -259,8 +275,13 @@ Se puede seleccionar más de una. Con esta pregunta obtendremos información de 
 
 -   [Principales problemas de privacidad en las redes sociales, Tulane University](https://sopa.tulane.edu/blog/key-social-media-privacy-issues-2020)
 
-### Aprobación
-Primera reunón: 8 de noviembre. Segunda reunión: 10 de noviembre
-|                                |                               |
-|--------------------------------|-------------------------------|
-| ![](Aprobaci%C3%B3n/Frida.jpg) | ![](Aprobaci%C3%B3n/Paul.jpg) |
+# Aprobación
+
+Reuniones:
+
+-   8 de noviembre
+-   10 de noviembre
+
+|                           |                          |
+|---------------------------|--------------------------|
+| ![](../Aprobacion/Frida.jpg) | ![](../Aprobacion/Paul.jpg) |

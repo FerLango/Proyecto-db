@@ -1,0 +1,22 @@
+---
+title: "Ciberseguridad en estudiantes de licenciatura"
+subtitle: "Menú"
+author: "Equipo 1: Diego Arellano, Emilio Ramírez, Fernanda Monter,   Fernando Lango"
+date: "`r format(Sys.time(), '%d/%m/%Y')`"
+output: 
+    prettydoc::html_pretty:
+        theme: cayman
+        highlight: github
+        number_sections: true
+        toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# [Objetivo y preguntas](/Preguntas)
+
+# [Presentación de datos](/Datos_presentación)
+
+# [Cuestionario](/Cuestionario)

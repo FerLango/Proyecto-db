@@ -1,6 +1,7 @@
 ---
 title: "Ciberseguridad en estudiantes de licenciatura"
-author: "Equipo 1: Fernanda Monter, Emilio Ramírez, Diego Arellano, Fernando Lango"
+subtitle: "Presentación de datos"
+author: "Equipo 1: Diego Arellano, Emilio Ramírez, Fernanda Monter,   Fernando Lango"
 date: "`r format(Sys.time(), '%d/%m/%Y')`"
 output: 
     ioslides_presentation:
