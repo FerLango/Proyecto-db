@@ -15,8 +15,8 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# [Objetivo y preguntas](/Preguntas)
+# [Objetivo y preguntas](https://ferlango.github.io/Proyecto-db/Preguntas/)
 
-# [Presentación de datos](/Datos_presentación)
+# [Presentación de datos](https://ferlango.github.io/Proyecto-db/Datos_presentación)
 
-# [Cuestionario](/Cuestionario)
+# [Cuestionario](https://ferlango.github.io/Proyecto-db/Cuestionario)
