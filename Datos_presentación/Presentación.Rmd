@@ -1,0 +1,35 @@
+---
+title: "Ciberseguridad en estudiantes de licenciatura"
+author: "Equipo 1: Fernanda Monter, Emilio Ramírez, Diego Arellano, Fernando Lango"
+date: "`r format(Sys.time(), '%d/%m/%Y')`"
+output: 
+    ioslides_presentation:
+        widescreen: false
+    pandoc_args: ["--output=index.html"]
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Modelo ER
+
+![](ER.png){width="100%"}
+
+## Scripts
+
+### Creación de objetos
+
+- [Script](https://github.com/FerLango/Proyecto-db/blob/main/Sql/Create.sql)
+
+### Inserción de datos
+
+- [Script](https://github.com/FerLango/Proyecto-db/blob/main/Sql/Create.sql)
+
+### Borrado de datos
+
+- [Script](https://github.com/FerLango/Proyecto-db/blob/main/Limpieza/clean.R)
+
+### Eliminación de objetos
+
+- [Script](https://github.com/FerLango/Proyecto-db/blob/main/Sql/Drop_objects.sql)

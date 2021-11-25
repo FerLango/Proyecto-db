@@ -79,6 +79,7 @@ create table victima(
 	id_prevencion_digital int4 references prevencion_digital (id_prevencion_digital) not null,
 	victima text
 );
+
 create table redes_sociales (
 	id_redes_sociales int4 constraint pk_redes_sociales primary key, 
 	id_demograficos int4 references demograficos (id_demograficos) not null,
@@ -91,6 +92,7 @@ create table redes_sociales (
 	ordena_ninguna text, 
 	ordena_otra text
 );
+
 create table sociales_cuales(
 	id_sociales_cuales int4 constraint pk_sociales_cuales primary key, 
 	id_redes_sociales int4 references redes_sociales (id_redes_sociales) not null,
