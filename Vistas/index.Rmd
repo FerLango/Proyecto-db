@@ -15,7 +15,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Las vistas creadas en este [Script](Vistas.sql) para responder nuestras preguntas de interés son las siguientes:
+Las vistas creadas en este [Script](https://github.com/FerLango/Proyecto-db/blob/main/Vistas/Vistas.sql) para responder nuestras preguntas de interés son las siguientes:
 
 ![](Vistas.jpg){width="100%"}
 
