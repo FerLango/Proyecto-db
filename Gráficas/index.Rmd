@@ -1,6 +1,6 @@
 ---
 title: "Ciberseguridad en estudiantes de licenciatura"
-subtitle: "Menú"
+subtitle: "Cuestionario"
 author: "Equipo 1: Diego Arellano, Emilio Ramírez, Fernanda Monter,   Fernando Lango"
 date: "`r format(Sys.time(), '%d/%m/%Y')`"
 output: 
@@ -15,10 +15,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# [Objetivo y preguntas](https://ferlango.github.io/Proyecto-db/Preguntas/)
+```{r echo=FALSE, out.width="100%", out.height="500px"}
+knitr::include_graphics("formulario.pdf")
+```
 
-# [Presentación de datos](https://ferlango.github.io/Proyecto-db/Datos_presentación)
-
-# [Cuestionario](https://ferlango.github.io/Proyecto-db/Cuestionario)
-
-# [Presentación de la información](https://ferlango.github.io/Proyecto-db/Gráficas)

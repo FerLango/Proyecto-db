@@ -24,11 +24,11 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ### Inserción de datos
 
-- [Script](https://github.com/FerLango/Proyecto-db/blob/main/Sql/Create.sql)
+- [Script](https://github.com/FerLango/Proyecto-db/blob/main/Limpieza/clean.R)
 
 ### Borrado de datos
 
-- [Script](https://github.com/FerLango/Proyecto-db/blob/main/Limpieza/clean.R)
+- [Script](https://github.com/FerLango/Proyecto-db/blob/main/Sql/Delete_data.sql)
 
 ### Eliminación de objetos
 
