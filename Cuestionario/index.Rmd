@@ -1,6 +1,6 @@
 ---
 title: "Ciberseguridad en estudiantes de licenciatura"
-subtitle: "Presentación de la información"
+subtitle: "Cuestionario"
 author: "Equipo 1: Diego Arellano, Emilio Ramírez, Fernanda Monter,   Fernando Lango"
 date: "`r format(Sys.time(), '%d/%m/%Y')`"
 output: 
@@ -15,51 +15,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-¿Cómo se compone nuestra población?
-
-¿Qué percepción tienen sobre la ciberseguridad?
-
-¿Qué tan expuestos se encuentran?
-
-¿Cuáles son sus dispositivos utilizados?
-
-¿Cuáles son los dispositivos más utilizados?
-
-¿Cuáles son las redes sociales utilizadas?
-
-¿Cuáles son las redes sociales más utilizadas?
-
-¿Cuáles son sus hábitos en compras en línea?
-
-¿Qué importancia le dan a los términos y condiciones y cookies al navegar?
-
-¿Han sido víctimas de amenazas y ataques digitales?
-
-¿Conocen a alguien que haya sido víctima de un ataque digital? ¿Crees que estos ataque se pudieron haber evitado?
-
-¿Cuáles son las medidas de seguridad más utilizadas?
-
-¿Qué medidas de protección tiene activadas en el navegador?
-
-¿Qué tanto les preocupa su información?
-
-¿Qué tan fácil dan su información?
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```{r echo=FALSE, out.width="100%", out.height="500px"}
+knitr::include_graphics("formulario.pdf")
+```
 

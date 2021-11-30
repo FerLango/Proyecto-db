@@ -1,0 +1,14 @@
+drop view compras_linea;
+drop view cookies;
+drop view dispositivos_mas_utilizados;
+drop view dispositivos_utilizados;
+drop view exposición;
+drop view informacion;
+drop view navegacion;
+drop view percepcion;
+drop view poblacion;
+drop view seguridad;
+drop view sociales_mas_utilizadas;
+drop view sociales_utilizadas;
+drop view victima_conocido;
+drop view victimas;

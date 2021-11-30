@@ -1,0 +1,180 @@
+---
+title: "Ciberseguridad en estudiantes de licenciatura"
+subtitle: "Vistas"
+author: "Equipo 1: Diego Arellano, Emilio Ramírez, Fernanda Monter,   Fernando Lango"
+date: "`r format(Sys.time(), '%d/%m/%Y')`"
+output: 
+    prettydoc::html_pretty:
+        theme: cayman
+        highlight: github
+        number_sections: true
+        toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Las vistas creadas en este [Script](Vistas.sql) para responder nuestras preguntas de interés son las siguientes:
+
+![](Vistas.jpg){width="100%"}
+
+# Población
+
+- ¿Cómo se compone nuestra población?
+
+En esta vista incluimos las variables licenciatura, edad, género, estado y áreas de la carrera que corresponden a las preguntas del cuestionario:
+
+- ¿Eres alumno de licenciatura?
+- ¿Qué edad tienes?
+- Género
+- ¿En qué estado se encuentra ubicada tu Universidad?
+- ¿A qué área corresponde tu carrera?
+
+# Percepción
+
+- ¿Qué percepción tienen sobre la ciberseguridad?
+
+En esta vista incluimos las variables seguridad, privacidad y huella que corresponden a las preguntas del cuestionario:
+
+- ¿Del 1 al 5 que tanto te preocupa tu seguridad digital?
+- ¿Sabes en qué consiste la privacidad digital?
+- ¿Conoces el término de huella digital?
+
+# Exposición
+
+- ¿Qué tan expuestos se encuentran?
+
+En esta vista incluimos las variables dispositivos, configuración, antivirus y actualización que corresponden a las preguntas del cuestionario:
+
+- ¿Cuántos dispositivos con acceso internet tienes?
+- ¿Permites que todas tus aplicaciones accedan a tu cámara, micrófono, ubicación, fotos y rastreo?
+- ¿Cuántos de estos dispositivos cuentan con antivirus?
+- ¿Cuántos tienen su última actualización?
+
+# Dispositivos utilizados
+
+- ¿Cuáles son sus dispositivos utilizados?
+
+En esta vista incluimos la variable dispositivos_cantidad que corresponde a las preguntas del cuestionario:
+
+- ¿Cuáles de estos dispositivos tienes?
+
+# Dispositivos más utilizados
+
+- ¿Cuáles son los dispositivos más utilizados?
+
+En esta vista incluimos las variables ordena_compu, ordena_tablet, ordena_celular, ordena_smart, ordena_otro que corresponden a las preguntas del cuestionario:
+
+- Ordena de mayor a menor los tres dispositivos que más usas
+
+# Redes sociales utilziadas
+
+- ¿Cuáles son las redes sociales utilizadas?
+
+En esta vista incluimos la variable sociales_cuales que corresponden a las preguntas del cuestionario:
+
+- ¿Cuáles redes sociales tienes?
+
+# Redes sociales más utilizadas
+
+- ¿Cuáles son las redes sociales más utilizadas?
+
+En esta vista incluimos las variables sociales_contar, ordena_facebook, ordena_instagram, ordena_whatsapp, ordena_twitter, ordena_tiktok, ordena_ninguna y ordena_otra que corresponden a las preguntas del cuestionario:
+
+- Ordena de mayor a menor las tres redes sociales que más utilizas
+
+# Compras en línea
+
+- ¿Cuáles son sus hábitos en compras en línea?
+
+En esta vista incluimos las variables banca, compras_online, paypal y cargos que corresponden a las preguntas del cuestionario:
+
+- ¿Tienes banca electrónica?
+- ¿Has realizado compras en línea?
+- Al realizar compras en línea, ¿utilizas una tarjeta digital o alguna plataforma de sistema de pagos en línea (PayPal)?
+- ¿Te han llegado cargos que no autorizaste de alguna aplicación con la que estabas en un periodo prueba (ej. Spotify, Netflix, etc.)?
+
+# Cookies
+
+- ¿Qué importancia le dan a los términos y condiciones y cookies al navegar?
+
+En esta vista incluimos las variables term_cond, cookies, cookies_accesibles y publicidad que corresponden a las preguntas del cuestionario:
+
+- Cuando te registras en algún sitio web, ¿te detienes a leer sus términos y condiciones, o los aceptas sin leerlos?
+- Cuando entras a un sitio web, ¿configuras las cookies, o aceptas el default?
+- ¿Crees que sería conveniente para el usuario que los términos y condiciones o cookies fueran presentados de una forma más accesible para todo tipo de público?
+- Después de buscar algún artículo en internet, ¿la publicidad que se le muestra en redes sociales corresponde a ese artículo? 
+
+# Víctimas
+
+- ¿Han sido víctimas de amenazas y ataques digitales?
+
+En esta vista incluimos las variables id_demograficos y victima que corresponden a las preguntas del cuestionario:
+
+- ¿Has sido víctima de alguno de estos escenarios?
+
+# Víctimas conocidas
+
+- ¿Conocen a alguien que haya sido víctima de un ataque digital? 
+- ¿Crees que estos ataque se pudieron haber evitado?
+
+En esta vista incluimos las variables con_victima y evitado que corresponden a las preguntas del cuestionario:
+
+- ¿Conoces a alguien que haya sido víctima de estos escenarios?
+- ¿Crees que lo pudiste haber evitado de alguna manera?
+
+# Seguridad
+
+- ¿Cuáles son las medidas de seguridad más utilizadas?
+
+En esta vista incluimos las variables id_demográficos y protección que corresponden a las preguntas del cuestionario:
+
+- Con el fin de proteger tus cuentas de redes sociales, ¿cuáles de las siguientes opciones realizas?
+
+# Navegación
+
+- ¿Qué medidas de protección tiene activadas en el navegador?
+
+En esta vista incluimos las variables navegador, url y phishing que corresponden a las preguntas del cuestionario:
+
+- ¿Tienes configurado en tu navegador alguna protección de privacidad?
+- ¿Verificas si todos los URL de los sitios que visitas inician con https?
+- ¿Tienes activada alguna protección contra phishing (engaño para obtener tus datos a través de internet) y malware (programa malicioso que daña tu dispositivo)?
+
+# Información 
+
+- ¿Qué tanto les preocupa su información?
+- ¿Qué tan fácil dan su información?
+
+En esta vista incluimos las variables datos, empresas, preocupación sobre empresas y username que corresponden a las preguntas del cuestionario:
+
+- ¿Sientes que los datos que proporcionas en la web son de importancia/utilidad para los sitios en los que navegas?
+- ¿Crees que las empresas utilizan la información de manera adecuada?
+- ¿Te preocupa que tu información sea utilizada con fines distintos a los que autorizaste?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
