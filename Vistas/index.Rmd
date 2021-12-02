@@ -68,7 +68,7 @@ En esta vista incluimos las variables ordena_compu, ordena_tablet, ordena_celula
 
 - Ordena de mayor a menor los tres dispositivos que más usas
 
-# Redes sociales utilziadas
+# Redes sociales utilizadas
 
 - ¿Cuáles son las redes sociales utilizadas?
 

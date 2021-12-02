@@ -8,7 +8,7 @@ from demograficos d
 	join exploratorias e using (id_demograficos)
 where d.licenciatura = 'Sí';
 
-create view exposición as
+create view exposicion as
 select v.dispositivos, v.configuracion, v.antivirus, v.actualizacion 
 from demograficos d 
 	join vulnerabilidad v using (id_demograficos)
