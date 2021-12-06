@@ -68,7 +68,6 @@ Los datos recolectados a través de este cuestionario son procesados en el lengu
 El objetivo de conocer la demografía es analizar cómo se compone nuestra población preguntando por su edad, genero, lugar de estudio y área a la que corresponde su carrera, delimitándola únicamente a estudiantes de licenciatura. En primera instancia mostraremos el total de muestras tomadas, seccionando a los estudiantes de licenciatura y posteriormente todo el análisis lo llevaremos a cabo con la población estudiantil universitaria. Con ello obtendremos la información necesaria para plantear diversas hipótesis en distintos escenarios demográficos.
 
 ### Población
-#### ¿Eres alumno de licenciatura?
 
 ```{r}
 temp <- 
@@ -77,10 +76,7 @@ temp <-
     tally()
 plot_ly(temp, labels = ~licenciatura, values = ~n, type='pie')
 ```
-Este resultado nos demuestra que el objetivo de difundir a alumnos de licenciatura la encuesta fue logrado exitosamente, ya que, solamente un 4% no fueron alumnos de licenciatura.
 
-
-#### ¿Qué edad tienes?
 
 ```{r}
 estados <- 
@@ -102,8 +98,6 @@ mxstate_choropleth(mapa, num_colors = 1,
                    title = "Número de personas por estado en México") %>%
     ggplotly()
 ```
-Vemos que aproximadamente el 70% de los encuestados tienen 19 o 20 años, esto es debido a que nuestro circulo social esta rodeado de personas de nuestra edad.
-#### Género
 
 ```{r}
 temp <- 
@@ -118,8 +112,6 @@ temp <-
     geom_bar(stat = "identity")
 ggplotly(temp)
 ```
-La mayoría de los encuestados fueron hombres.
-#### ¿En qué estado se encuentra ubicada tu Universidad?
 
 ```{r}
 temp <- 
@@ -129,8 +121,6 @@ temp <-
     na.omit()
 plot_ly(temp, labels = ~genero, values = ~n, type='pie')
 ```
-Vemos que la gran mayoría de los encuestados estudian en CDMX.
-#### ¿A qué área corresponde tu carrera?
 
 ```{r}
 temp <- 
@@ -140,13 +130,12 @@ temp <-
     na.omit()
 plot_ly(temp, labels = ~areas, values = ~n, type='pie')
 ```
-Casi el 90% de los encuestados pertenecen a área  y área 3.
+
 # Exploratorias
 
 Como un primer acercamiento al encuestado del tema que trataran las siguientes preguntas y más que nada, para conocer su primera impresión del tema, les preguntamos si conocían los términos de “seguridad digital”, “privacidad digital”, “huella digital” y qué importancia le daban.
 
 ### Percepción 
-#### ¿Del 1 al 5 que tanto te preocupa tu seguridad digital?
 
 ```{r}
 temp <- 
@@ -161,8 +150,6 @@ temp <-
     geom_bar(stat = "identity")
 ggplotly(temp)
 ```
-A la mayoría de los estudiantes les preocupa su seguridad digital, lo cual es bueno, ya que hay una intención de informarse respecto a este tema.
-#### ¿Sabes en qué consiste la privacidad digital?
 
 ```{r}
 temp <- 
@@ -171,8 +158,6 @@ temp <-
     tally()
 plot_ly(temp, labels = ~privacidad, values = ~n, type='pie')
 ```
-La mayoría de los estudiantes de licenciatura conocen que es la privacidad digital, hay una posible mejora en este aspecto, ya que el 26% afirma no conocer bien este término.
-##### ¿Conoces el término de huella digital?
 
 ```{r}
 temp <- 
@@ -181,7 +166,7 @@ temp <-
     tally()
 plot_ly(temp, labels = ~huella, values = ~n, type='pie')
 ```
-Casi el 80% sabe a lo que significa huella digital, lo cual, implica que la población está bien informada.
+
 # Vulnerabilidad
 
 En este apartado deseamos conocer qué tan expuestos están los estudiantes de licenciatura a ataques digitales a través de cuántos dispositivos tienen y las características de ellos, los dispositivos que más utilizan, las redes sociales que utilizan, al igual que las más utilizadas y los hábitos de los estudiantes al realizar compras en línea.
@@ -232,7 +217,7 @@ temp <-
     geom_bar(stat = "identity")
 ggplotly(temp)
 ```
-
+La gran mayoría de los encuestados no cuentan con antivirus o sólo un pequeño número. Esto se puede deber a que los antivirus son softwares de paga y no son fáciles de implementar, a diferencia de los ajustes de privacidad en dispositivos y redes sociales. 
 
 #### ¿Cuántos tienen su última actualización?
 
@@ -250,6 +235,7 @@ temp <-
     geom_bar(stat = "identity")
 ggplotly(temp)
 ```
+La cantidad de dispositivos que tienen su última actualización más seleccionada coincide con la cantidad de dispositivos que tienen los encuestados más seleccionada. Esto nos indica que la mayoría de los dispositivos cuentan con su última actualización. Esto se puede deber, nuevamente, a que el sistema operativo del dispositivo siempre te notifica cuando una nueva actualización está disponible. Una razón por la cual algunos dispositivos no tengan la última actualización es que las últimas actualizaciones no están disponibles para esos dispositivos. 
 
 ### Dispositivos utilizados
 
@@ -266,6 +252,7 @@ temp <-
     na.omit()
 plot_ly(temp, labels = ~dispositivos_cantidad, values = ~n, type='pie')
 ```
+Las opciones más populares son celular y computadora. Esto es de esperarse ya que el celular es un dispositivo necesario que usamos casi todo el tiempo. Una computadora personal es muy útil en un contexto universitario, al igual que la tablet, por lo tanto, son las dos opciones más comunes de poseer después del celular. 
 
 ### Dispositivos más utilizados
 
@@ -289,6 +276,7 @@ temp <-
 
 ggplotly(temp)
 ```
+Los resultados de esta gráfica indican que la mayoría de encuestados consideran que el celular es el dispositivo que más utilizan, seguido de la computadora y en tercer lugar las tablets.   
 
 ### Redes sociales utilizadas
 
@@ -305,6 +293,8 @@ temp <-
     na.omit()
 plot_ly(temp, labels = ~sociales_cuales, values = ~n, type='pie')
 ```
+
+Prácticamente toda nuestra población utiliza redes sociales. Las más comunes son aquellas propiedad de Meta: WhatsApp, Instagram y Facebook, primer, segundo y tercer lugar respectivamente. Esto nos indica que Meta tiene una gran porción del mercado, por lo tanto, es responsable de los datos de muchas personas. 
 
 ### Redes sociales más utilizadas
 
@@ -329,6 +319,9 @@ temp <-
 ggplotly(temp)
 ```
 
+Los resultados de esta gráfica es consistente con la anterior, ya que la red social que más ocupa el primer lugar de red social más utilizada es WhatsApp, Instagram es la red social que más ocupa el segundo lugar y la red social que más ocupa el tercer lugar es entre Facebook e Instagram. 
+WhatsApp puede ser la opción más popular debido a que su uso es muy flexible, puede ser un uso casual (hablar con tus amigos) o formal (comunicarse con compañeros de la escuela o trabajo). 
+
 ### Compras en línea
 
 #### ¿Tienes banca electrónica?
@@ -341,6 +334,8 @@ temp <-
 plot_ly(temp, labels = ~banca, values = ~n, type='pie')
 ```
 
+La mayoría de los encuestados sí cuenta con banca electrónica.
+
 #### ¿Has realizado compras en línea?
 
 ```{r}
@@ -350,6 +345,8 @@ temp <-
     tally()
 plot_ly(temp, labels = ~compras_online, values = ~n, type='pie')
 ```
+
+La vasta mayoría de la población de estudio sí ha realizado compras en línea lo cual, sin las precauciones adecuadas, puede aumentar el peligro de que información bancaria sea robada. Las compras en línea han aumentado significantemente a partir de la pandemia, siendo cada vez más común pedir artículos de sitios web como Amazon, Mercado libre e incluso Facebook. 
 
 #### Al realizar compras en línea, ¿utilizas una tarjeta digital o alguna plataforma de sistema de pagos en línea (PayPal)?
 
@@ -361,6 +358,8 @@ temp <-
     na.omit()
 plot_ly(temp, labels = ~paypal, values = ~n, type='pie')
 ```
+La mayoría de los encuestados sí usa una tarjeta digital o alguna plataforma de sistema de pagos en línea. Esto quiere decir que consideran que es son más convenientes estas alternativas a su contraparte física. 
+
 #### ¿Te han llegado cargos que no autorizaste de alguna aplicación con la que estabas en un periodo prueba (ej. Spotify, Netflix, etc.)?
 
 ```{r}
@@ -370,6 +369,7 @@ temp <-
     tally()
 plot_ly(temp, labels = ~cargos, values = ~n, type='pie')
 ```
+A la gran mayoría de los encuestados no le han llegado cargos no autorizados de aplicaciones despúes del periodo prueba. Esto es evidencia de que la información bancaria del usuario no es usada, en la mayoría de los casos, después de que el usuario usa su periodo de prueba. 
 
 # Medidas de prevención
 
@@ -511,8 +511,6 @@ En manejo de información nos enfocamos en conocer la percepción que tiene el e
 
 ### Información 
 
-#### ¿Sientes que los datos que proporcionas en la web son de importancia/utilidad para los sitios en los que navegas?
-
 ```{r}
 temp <- 
     informacion %>%
@@ -520,8 +518,6 @@ temp <-
     tally()
 plot_ly(temp, labels = ~datos, values = ~n, type='pie')
 ```
-Más de la mitad de nuestros encuestados conciben su información personal como algo valioso para las sitios. Esto se debe a que, mucha de esta información es utilizada para anuncios personalizados y los usuarios de redes sociales notan rápidamente la diferencia. Por otro lado, es evidente que 1/4 de los encuestados necesita informarse sobre este tema, ya que no fueron capaces de tomar una decisión concreta.
-#### ¿Crees que las empresas utilizan la información de manera adecuada?
 
 ```{r}
 temp <- 
@@ -530,9 +526,6 @@ temp <-
     tally()
 plot_ly(temp, labels = ~empresas, values = ~n, type='pie')
 ```
-La mayoría de los encuestados demuestra una desconfianza hacia las empresas que manejan sus datos personales. Probablemente, esto sea debido a que, existen varios escándalos muy populares sobre el mal uso de datos por parte de las empresas, por ejemplo, el caso de cambridge analytica y su influencia en las elecciones del 2016, el caso de facebook de 2021 y el de yahoo del 2013.
-
-#### ¿Te preocupa que tu información sea utilizada con fines distintos a los que autorizaste?
 
 ```{r}
 temp <- 
@@ -541,19 +534,141 @@ temp <-
     tally()
 plot_ly(temp, labels = ~preocupacion_empresas, values = ~n, type='pie')
 ```
-Casi el 80% de los encuestados estuvo de acuerdo en que es algo preocupante el hecho que las empresas ejerzan un uso inadecuado de los datos. Este resultado es realmente impactante ya que, aunque no mucha gente conciba su información como algo útil o relevante a las empresas, a estás mismas les preocupa que hagan mal uso de esa información ´inútil´ que las empresas reciben por parte de los usuarios. 
 
-#### ¿Cuál es tu username en instagram?
 ```{r}
 temp <- 
     informacion %>%
     group_by(username) %>%
     tally()
 no <- filter(temp, username == "No me interesa")$n
-user <- c("Proporcionó su usuario", "No lo proporcionó")
+user <- c("Proporionó su usuario", "No lo proporcionó")
 n <- c(sum(temp$n)-no,no)
 temp <-data.frame(user,n)
 
 plot_ly(temp, labels = ~user, values = ~n, type='pie')
 ```
-Podemos ver con que facilidad los usuarios proporcian su información personal.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
