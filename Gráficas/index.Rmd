@@ -496,6 +496,8 @@ En manejo de información nos enfocamos en conocer la percepción que tiene el e
 
 ### Información 
 
+#### ¿Sientes que los datos que proporcionas en la web son de importancia/utilidad para los sitios en los que navegas?
+
 ```{r}
 temp <- 
     informacion %>%
@@ -503,8 +505,8 @@ temp <-
     tally()
 plot_ly(temp, labels = ~datos, values = ~n, type='pie')
 ```
-#### ¿Sientes que los datos que proporcionas en la web son de importancia/utilidad para los sitios en los que navegas?
-
+Más de la mitad de nuestros encuestados conciben su información personal como algo valioso para las sitios. Esto se debe a que, mucha de esta información es utilizada para anuncios personalizados y los usuarios de redes sociales notan rápidamente la diferencia. Por otro lado, es evidente que 1/4 de los encuestados necesita informarse sobre este tema, ya que no fueron capaces de tomar una decisión concreta.
+#### ¿Crees que las empresas utilizan la información de manera adecuada?
 
 ```{r}
 temp <- 
@@ -513,7 +515,9 @@ temp <-
     tally()
 plot_ly(temp, labels = ~empresas, values = ~n, type='pie')
 ```
-#### ¿Crees que las empresas utilizan la información de manera adecuada?
+La mayoría de los encuestados demuestra una desconfianza hacia las empresas que manejan sus datos personales. Probablemente, esto sea debido a que, existen varios escándalos muy populares sobre el mal uso de datos por parte de las empresas, por ejemplo, el caso de cambridge analytica y su influencia en las elecciones del 2016, el caso de facebook de 2021 y el de yahoo del 2013.
+
+#### ¿Te preocupa que tu información sea utilizada con fines distintos a los que autorizaste?
 
 ```{r}
 temp <- 
@@ -522,23 +526,18 @@ temp <-
     tally()
 plot_ly(temp, labels = ~preocupacion_empresas, values = ~n, type='pie')
 ```
-#### ¿Te preocupa que tu información sea utilizada con fines distintos a los que autorizaste?
+Casi el 80% de los encuestados estuvo de acuerdo en que es algo preocupante el hecho que las empresas ejerzan un uso inadecuado de los datos. Este resultado es realmente impactante ya que, aunque no mucha gente conciba su información como algo útil o relevante a las empresas, a estás mismas les preocupa que hagan mal uso de esa información ´inútil´ que las empresas reciben por parte de los usuarios. 
 
+#### ¿Cuál es tu username en instagram?
 ```{r}
 temp <- 
     informacion %>%
     group_by(username) %>%
     tally()
 no <- filter(temp, username == "No me interesa")$n
-user <- c("Proporionó su usuario", "No lo proporcionó")
+user <- c("Proporcionó su usuario", "No lo proporcionó")
 n <- c(sum(temp$n)-no,no)
 temp <-data.frame(user,n)
 
 plot_ly(temp, labels = ~user, values = ~n, type='pie')
 ```
-
-
-
-
-
-
