@@ -173,7 +173,7 @@ En este apartado deseamos conocer qué tan expuestos están los estudiantes de l
 
 ### Exposición
 
-¿Cuántos dispositivos con acceso a internet tienes?
+#### ¿Cuántos dispositivos con acceso a internet tienes?
 
 ```{r}
 temp <- 
@@ -188,7 +188,7 @@ temp <-
     geom_bar(stat = "identity")
 ggplotly(temp)
 ```
-¿Permites que todas tus aplicaciones accedan a tu cámara, micrófono, ubicación, fotos y rastreo?
+#### ¿Permites que todas tus aplicaciones accedan a tu cámara, micrófono, ubicación, fotos y rastreo?
 
 ```{r}
 temp <- 
@@ -199,7 +199,7 @@ temp <-
 plot_ly(temp, labels = ~configuracion, values = ~n, type='pie')
 ```
 
-¿Cuántos de estos dispositivos cuentan con antivirus?
+#### ¿Cuántos de estos dispositivos cuentan con antivirus?
 
 ```{r}
 temp <- 
@@ -215,7 +215,7 @@ temp <-
 ggplotly(temp)
 ```
 
-¿Cuántos tienen su última actualización?
+#### ¿Cuántos tienen su última actualización?
 
 ```{r}
 temp <- 
@@ -234,7 +234,7 @@ ggplotly(temp)
 
 ### Dispositivos utilizados
 
-¿Cuáles de estos dispositivos tienes?
+#### ¿Cuáles de estos dispositivos tienes?
 
 ```{r}
 dispositivos_utilizados$dispositivos_cantidad <-
@@ -250,7 +250,7 @@ plot_ly(temp, labels = ~dispositivos_cantidad, values = ~n, type='pie')
 
 ### Dispositivos más utilizados
 
-Ordena de mayor a menor los tres dispositivos que más usas
+#### Ordena de mayor a menor los tres dispositivos que más usas
 
 ```{r}
 temp <- 
@@ -273,7 +273,7 @@ ggplotly(temp)
 
 ### Redes sociales utilizadas
 
-¿Cuáles redes sociales tienes?
+#### ¿Cuáles redes sociales tienes?
 
 ```{r}
 sociales_utilizadas$sociales_cuales <-
@@ -289,7 +289,7 @@ plot_ly(temp, labels = ~sociales_cuales, values = ~n, type='pie')
 
 ### Redes sociales más utilizadas
 
-De las siguientes redes sociales, ¿cuál es la que empleas más?
+#### De las siguientes redes sociales, ¿cuál es la que empleas más?
 
 ```{r}
 temp <- 
@@ -312,7 +312,7 @@ ggplotly(temp)
 
 ### Compras en línea
 
-¿Tienes banca electrónica?
+#### ¿Tienes banca electrónica?
 
 ```{r}
 temp <- 
@@ -321,7 +321,8 @@ temp <-
     tally()
 plot_ly(temp, labels = ~banca, values = ~n, type='pie')
 ```
-¿Has realizado compras en línea?
+
+#### ¿Has realizado compras en línea?
 
 ```{r}
 temp <- 
@@ -331,7 +332,7 @@ temp <-
 plot_ly(temp, labels = ~compras_online, values = ~n, type='pie')
 ```
 
-Al realizar compras en línea, ¿utilizas una tarjeta digital o alguna plataforma de sistema de pagos en línea (PayPal)?
+#### Al realizar compras en línea, ¿utilizas una tarjeta digital o alguna plataforma de sistema de pagos en línea (PayPal)?
 
 ```{r}
 temp <- 
@@ -341,7 +342,7 @@ temp <-
     na.omit()
 plot_ly(temp, labels = ~paypal, values = ~n, type='pie')
 ```
-¿Te han llegado cargos que no autorizaste de alguna aplicación con la que estabas en un periodo prueba (ej. Spotify, Netflix, etc.)?
+#### ¿Te han llegado cargos que no autorizaste de alguna aplicación con la que estabas en un periodo prueba (ej. Spotify, Netflix, etc.)?
 
 ```{r}
 temp <- 
