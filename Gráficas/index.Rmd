@@ -503,6 +503,8 @@ temp <-
     tally()
 plot_ly(temp, labels = ~datos, values = ~n, type='pie')
 ```
+#### ¿Sientes que los datos que proporcionas en la web son de importancia/utilidad para los sitios en los que navegas?
+
 
 ```{r}
 temp <- 
@@ -511,6 +513,7 @@ temp <-
     tally()
 plot_ly(temp, labels = ~empresas, values = ~n, type='pie')
 ```
+#### ¿Crees que las empresas utilizan la información de manera adecuada?
 
 ```{r}
 temp <- 
@@ -519,6 +522,7 @@ temp <-
     tally()
 plot_ly(temp, labels = ~preocupacion_empresas, values = ~n, type='pie')
 ```
+#### ¿Te preocupa que tu información sea utilizada con fines distintos a los que autorizaste?
 
 ```{r}
 temp <- 
@@ -532,125 +536,6 @@ temp <-data.frame(user,n)
 
 plot_ly(temp, labels = ~user, values = ~n, type='pie')
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
