@@ -188,6 +188,8 @@ temp <-
     geom_bar(stat = "identity")
 ggplotly(temp)
 ```
+La mayor parte de la población de estudio tiene tres dispositivos. La gran mayoría tiene al menos un dispositivo con acceso a internet, por lo tanto, la ciberseguridad es un tema relevante para los encuestados. Un mayor número de dispositivos por persona nos habla del grado de exposición a ataques digitales, especialmente si no toma las medidas necesarias para protegerlos y al tener más dispositivos es más fácil desatender algunos. 
+
 #### ¿Permites que todas tus aplicaciones accedan a tu cámara, micrófono, ubicación, fotos y rastreo?
 
 ```{r}
@@ -198,6 +200,7 @@ temp <-
     na.omit()
 plot_ly(temp, labels = ~configuracion, values = ~n, type='pie')
 ```
+La mayoría de los encuestados contestaron que no permiten a todas sus aplicaciones acceder a la cámara, micrófono, ubicación, fotos y rastreo de sus dispositivos. Esto se puede deber a que los sistemas operativos te notifican que cierta aplicación quiere usar alguna de estas funciones y fácilmente puedes negarte a que accedan a ellas. De la misma forma, es fácil entrar a la configuración del dispositivo y desactivar el acceso de las aplicaciones. Es un ejemplo de como hacer más accesible para las personas proteger sus dispostivos. 
 
 #### ¿Cuántos de estos dispositivos cuentan con antivirus?
 
@@ -214,6 +217,7 @@ temp <-
     geom_bar(stat = "identity")
 ggplotly(temp)
 ```
+
 
 #### ¿Cuántos tienen su última actualización?
 
