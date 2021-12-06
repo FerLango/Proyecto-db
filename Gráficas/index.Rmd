@@ -556,3 +556,4 @@ temp <-data.frame(user,n)
 
 plot_ly(temp, labels = ~user, values = ~n, type='pie')
 ```
+Podemos ver con que facilidad los usuarios proporcian su información personal.
