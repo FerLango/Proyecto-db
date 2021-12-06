@@ -68,6 +68,7 @@ Los datos recolectados a través de este cuestionario son procesados en el lengu
 El objetivo de conocer la demografía es analizar cómo se compone nuestra población preguntando por su edad, genero, lugar de estudio y área a la que corresponde su carrera, delimitándola únicamente a estudiantes de licenciatura. En primera instancia mostraremos el total de muestras tomadas, seccionando a los estudiantes de licenciatura y posteriormente todo el análisis lo llevaremos a cabo con la población estudiantil universitaria. Con ello obtendremos la información necesaria para plantear diversas hipótesis en distintos escenarios demográficos.
 
 ### Población
+#### ¿Eres alumno de licenciatura?
 
 ```{r}
 temp <- 
@@ -76,7 +77,10 @@ temp <-
     tally()
 plot_ly(temp, labels = ~licenciatura, values = ~n, type='pie')
 ```
+Este resultado nos demuestra que el objetivo de difundir a alumnos de licenciatura la encuesta fue logrado exitosamente, ya que, solamente un 4% no fueron alumnos de licenciatura.
 
+
+#### ¿Qué edad tienes?
 
 ```{r}
 estados <- 
@@ -98,6 +102,8 @@ mxstate_choropleth(mapa, num_colors = 1,
                    title = "Número de personas por estado en México") %>%
     ggplotly()
 ```
+Vemos que aproximadamente el 70% de los encuestados tienen 19 o 20 años, esto es debido a que nuestro circulo social esta rodeado de personas de nuestra edad.
+#### Género
 
 ```{r}
 temp <- 
@@ -112,6 +118,8 @@ temp <-
     geom_bar(stat = "identity")
 ggplotly(temp)
 ```
+La mayoría de los encuestados fueron hombres.
+#### ¿En qué estado se encuentra ubicada tu Universidad?
 
 ```{r}
 temp <- 
@@ -121,6 +129,8 @@ temp <-
     na.omit()
 plot_ly(temp, labels = ~genero, values = ~n, type='pie')
 ```
+Vemos que la gran mayoría de los encuestados estudian en CDMX.
+#### ¿A qué área corresponde tu carrera?
 
 ```{r}
 temp <- 
@@ -130,12 +140,13 @@ temp <-
     na.omit()
 plot_ly(temp, labels = ~areas, values = ~n, type='pie')
 ```
-
+Casi el 90% de los encuestados pertenecen a área  y área 3.
 # Exploratorias
 
 Como un primer acercamiento al encuestado del tema que trataran las siguientes preguntas y más que nada, para conocer su primera impresión del tema, les preguntamos si conocían los términos de “seguridad digital”, “privacidad digital”, “huella digital” y qué importancia le daban.
 
 ### Percepción 
+#### ¿Del 1 al 5 que tanto te preocupa tu seguridad digital?
 
 ```{r}
 temp <- 
@@ -150,6 +161,8 @@ temp <-
     geom_bar(stat = "identity")
 ggplotly(temp)
 ```
+A la mayoría de los estudiantes les preocupa su seguridad digital, lo cual es bueno, ya que hay una intención de informarse respecto a este tema.
+#### ¿Sabes en qué consiste la privacidad digital?
 
 ```{r}
 temp <- 
@@ -158,6 +171,8 @@ temp <-
     tally()
 plot_ly(temp, labels = ~privacidad, values = ~n, type='pie')
 ```
+La mayoría de los estudiantes de licenciatura conocen que es la privacidad digital, hay una posible mejora en este aspecto, ya que el 26% afirma no conocer bien este término.
+##### ¿Conoces el término de huella digital?
 
 ```{r}
 temp <- 
@@ -166,7 +181,7 @@ temp <-
     tally()
 plot_ly(temp, labels = ~huella, values = ~n, type='pie')
 ```
-
+Casi el 80% sabe a lo que significa huella digital, lo cual, implica que la población está bien informada.
 # Vulnerabilidad
 
 En este apartado deseamos conocer qué tan expuestos están los estudiantes de licenciatura a ataques digitales a través de cuántos dispositivos tienen y las características de ellos, los dispositivos que más utilizan, las redes sociales que utilizan, al igual que las más utilizadas y los hábitos de los estudiantes al realizar compras en línea.
