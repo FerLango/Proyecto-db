@@ -1,0 +1,771 @@
+---
+title: "Ciberseguridad en estudiantes de licenciatura"
+subtitle: "Presentación de la información"
+author: "Equipo 1: Diego Arellano, Emilio Ramírez, Fernanda Monter,   Fernando Lango"
+date: "`r format(Sys.time(), '%d/%m/%Y')`"
+output: 
+    prettydoc::html_pretty:
+        theme: cayman
+        highlight: github
+        number_sections: true
+        toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+```
+
+```{r, include=FALSE}
+library(tidyverse)
+library(plotly)
+library(mxmaps)
+library(gdata)
+library(gridExtra)
+library(RPostgreSQL)
+library(getPass)
+library(DBI)
+
+driver <- dbDriver(drvName = "PostgreSQL")
+
+db <- dbConnect(driver,
+                dbname="postgres",
+                host="54.161.119.17",
+                port=5432,
+                user="admin",
+                password = getPass("Password:"))
+
+compras_linea <- dbGetQuery(db,'SELECT * FROM "compras_linea"')
+cookies <- dbGetQuery(db,'SELECT * FROM "cookies"')
+dispositivos_mas_utilizados <- dbGetQuery(db,'SELECT * FROM "dispositivos_mas_utilizados"')
+dispositivos_utilizados <- dbGetQuery(db,'SELECT * FROM "dispositivos_utilizados"')
+exposicion <- dbGetQuery(db,'SELECT * FROM "exposicion"')
+informacion <- dbGetQuery(db,'SELECT * FROM "informacion"')
+navegacion <- dbGetQuery(db,'SELECT * FROM "navegacion"')
+percepcion <- dbGetQuery(db,'SELECT * FROM "percepcion"')
+poblacion <- dbGetQuery(db,'SELECT * FROM "poblacion"')
+seguridad <- dbGetQuery(db,'SELECT * FROM "seguridad"')
+sociales_mas_utilizadas <- dbGetQuery(db,'SELECT * FROM "sociales_mas_utilizadas"')
+sociales_utilizadas <- dbGetQuery(db,'SELECT * FROM "sociales_utilizadas"')
+victima_conocido <- dbGetQuery(db,'SELECT * FROM "victima_conocido"')
+victimas <- dbGetQuery(db,'SELECT * FROM "victimas"')
+
+dbDisconnect(db)
+```
+
+En el presente trabajo se pretende conocer la percepción sobre ciberseguridad entre estudiantes de licenciatura. Siendo más específicos, buscamos:
+
+- Conocer los usos y necesidades de tecnología de la población estudiantil.
+- Estudiar y analizar que tanto se conoce de la ciberseguridad.
+- Analizar la percepción de amenazas y ataques digitales.
+- Conocer las medidas de seguridad más utilizadas.
+
+Para poder llevar a cabo este estudio se realizó una encuesta a `r nrow(poblacion)` sujetos por medio de un Google Forms compuesto por un total de 36 preguntas de tipo opción múltiple.
+
+Los datos recolectados a través de este cuestionario son procesados en el lenguaje R e incorporados a una base de datos *PostreSQL* que se encuentra activa dentro de [Amazon Web Services (AWS)](https://aws.amazon.com/). Posteriormente, el análisis presentado a continuación mostrando los resultados correspondientes también fue generado con el lenguaje R.
+
+# Demografía
+
+El objetivo de conocer la demografía es analizar cómo se compone nuestra población preguntando por su edad, genero, lugar de estudio y área a la que corresponde su carrera, delimitándola únicamente a estudiantes de licenciatura. En primera instancia mostraremos el total de muestras tomadas, seccionando a los estudiantes de licenciatura y posteriormente todo el análisis lo llevaremos a cabo con la población estudiantil universitaria. Con ello obtendremos la información necesaria para plantear diversas hipótesis en distintos escenarios demográficos.
+
+### Población
+
+```{r}
+temp <- 
+    poblacion %>%
+    group_by(licenciatura) %>%
+    tally()
+plot_ly(temp, labels = ~licenciatura, values = ~n, type='pie') %>%
+    layout(title = "¿Son alumnos de licenciatura?")
+```
+
+Este resultado nos demuestra que el objetivo de difundir a alumnos de licenciatura la encuesta fue logrado exitosamente, ya que, solamente un 4% no fueron alumnos de licenciatura.
+
+```{r}
+estados <- 
+    poblacion %>%
+    group_by(estado) %>%
+    tally()
+estados$estado <- gsub("CDMX","Ciudad de México",estados$estado)
+estados$estado <- gsub("Estado de México","México",estados$estado)
+
+
+mapa <- 
+    left_join(df_mxstate_2020, estados, by=c("state_name"="estado")) %>%
+    rename(value = n) %>%
+    replace(.=="NA",0)
+mapa[is.na(mapa)] = 0
+
+mxstate_choropleth(mapa, num_colors = 1, 
+                   legend = "Cantidad",
+                   title = "Número de encuestados por estado en México") %>%
+    ggplotly()
+```
+
+Vemos que la gran mayoría de los encuestados estudian en CDMX.
+
+```{r}
+temp <- 
+    poblacion %>%
+    group_by(edad) %>%
+    tally() 
+    
+
+temp <- 
+    temp %>%
+    ggplot(aes(x=edad, y=n, fill=n)) +
+    geom_bar(stat = "identity") +
+    labs(title = "Edad",
+         fill = "Cantidad") +
+    ylab("Cantidad") +
+    xlab("Edad")
+ggplotly(temp)
+```
+
+Vemos que aproximadamente el 70% de los encuestados tienen 19 o 20 años, esto es debido a que nuestro circulo social esta rodeado de personas de nuestra edad. Además, nos resulto interesante e inspirador que hubieran personas de 31 y de 42 años cursando la licenciatura.
+
+```{r}
+temp <- 
+    poblacion %>%
+    group_by(genero) %>%
+    tally() %>%
+    na.omit()
+plot_ly(temp, labels = ~genero, values = ~n, type='pie') %>%
+    layout(title = "Género")
+```
+
+La mayoría de los encuestados fueron hombres.
+
+```{r}
+temp <- 
+    poblacion %>%
+    group_by(areas) %>%
+    tally() %>%
+    na.omit()
+plot_ly(temp, labels = ~areas, values = ~n, type='pie') %>%
+    layout(title = "Área de estudio")
+```
+
+Casi el 90% de los encuestados pertenecen a área 1 y área 3.
+
+# Exploratorias
+
+Como un primer acercamiento al encuestado del tema que trataran las siguientes preguntas y más que nada, para conocer su primera impresión del tema, les preguntamos si conocían los términos de “seguridad digital”, “privacidad digital”, “huella digital” y qué importancia le daban.
+
+### Percepción 
+
+```{r}
+temp <- 
+    percepcion %>%
+    group_by(seguridad) %>%
+    tally() 
+    
+temp <- 
+    temp %>%
+    ggplot(aes(x=seguridad, y=n, fill = n)) +
+    geom_bar(stat = "identity") +
+    labs(title = "¿Qué tanto les preocupa su seguridad digital?",
+         fill = "Cantidad") +
+    ylab("Cantidad") +
+    xlab("Preocupación (Likert)")
+ggplotly(temp)
+```
+
+A la mayoría de los estudiantes les preocupa su seguridad digital, lo cual es bueno, ya que hay una intención de informarse respecto a este tema. Los resultados aunque son favorables en cuanto a la importancia que le dan a la seguridad, hay personas que no le toman la atención necesaria. Creemos que este tema se debe de tocar más y que la información sea mas común entre los usuarios de internet.
+
+```{r}
+temp <- 
+    percepcion %>%
+    group_by(privacidad) %>%
+    tally()
+plot_ly(temp, labels = ~privacidad, values = ~n, type='pie') %>%
+    layout(title = "¿Saben qué es la privacidad digital?")
+```
+
+La mayoría de los estudiantes de licenciatura conocen que es la privacidad digital, hay una posible mejora en este aspecto, ya que el 26% afirma no conocer bien este término.
+
+```{r}
+temp <- 
+    percepcion %>%
+    group_by(huella) %>%
+    tally()
+plot_ly(temp, labels = ~huella, values = ~n, type='pie') %>%
+    layout(title = "¿Saben qué es la huella digital?")
+```
+
+Casi el 80% sabe a lo que significa huella digital, lo cual, implica que la población está bien informada.
+
+# Vulnerabilidad
+
+En este apartado deseamos conocer qué tan expuestos están los estudiantes de licenciatura a ataques digitales a través de cuántos dispositivos tienen y las características de ellos, los dispositivos que más utilizan, las redes sociales que utilizan, al igual que las más utilizadas y los hábitos de los estudiantes al realizar compras en línea.
+
+### Exposición
+
+```{r}
+temp <- 
+    exposicion %>%
+    group_by(dispositivos) %>%
+    tally()
+
+temp <- 
+    temp %>%
+    ggplot(aes(x=dispositivos, y=n, fill = n)) +
+    geom_bar(stat = "identity") +
+    labs(title = "¿Cuántos dispositivos con acceso a internet tienes?") +
+    ylab("Cantidad") +
+    xlab("Dispositivos")
+ggplotly(temp, tooltip = c("dispositivos","n"))
+```
+
+La mayor parte de la población de estudio tiene tres dispositivos. La gran mayoría tiene al menos un dispositivo con acceso a internet, por lo tanto, la ciberseguridad es un tema relevante para los encuestados. Un mayor número de dispositivos por persona nos habla del grado de exposición a ataques digitales, especialmente si no toma las medidas necesarias para protegerlos y al tener más dispositivos es más fácil desatender algunos. 
+
+```{r}
+temp <- 
+    exposicion %>%
+    group_by(configuracion) %>%
+    tally() %>%
+    na.omit()
+plot_ly(temp, labels = ~configuracion, values = ~n, 
+        type='pie') %>%
+    layout(title = "¿Le das todos los permisos de acceso a tus aplicaciones?")
+```
+
+La mayoría de los encuestados contestaron que no permiten a todas sus aplicaciones acceder a la cámara, micrófono, ubicación, fotos y rastreo de sus dispositivos. Esto se puede deber a que los sistemas operativos te notifican que cierta aplicación quiere usar alguna de estas funciones y fácilmente puedes negarte a que accedan a ellas. De la misma forma, es fácil entrar a la configuración del dispositivo y desactivar el acceso de las aplicaciones. Es un ejemplo de como hacer más accesible para las personas proteger sus dispostivos. 
+
+```{r}
+temp <- 
+    exposicion %>%
+    group_by(antivirus) %>%
+    tally() 
+    
+
+temp <- 
+    temp %>%
+    ggplot(aes(x=antivirus, y=n, fill=n)) +
+    geom_bar(stat = "identity") +
+    labs(title = "¿Cuántos dispositivos tienes con antivirus?") +
+    ylab("Cantidad") +
+    xlab("Dispositivos con antivirus")
+ggplotly(temp)
+```
+
+La gran mayoría de los encuestados no cuentan con antivirus o sólo un pequeño número. Esto se puede deber a que los antivirus son softwares de paga y no son fáciles de implementar, a diferencia de los ajustes de privacidad en dispositivos y redes sociales. 
+
+```{r}
+temp <- 
+    exposicion %>%
+    group_by(actualizacion) %>%
+    tally() %>%
+    filter(actualizacion < 20)
+    
+
+temp <- 
+    temp %>%
+    ggplot(aes(x=actualizacion, y=n, fill=n)) +
+    geom_bar(stat = "identity") +
+    labs(title = "¿Cuántos dispositivos tienen su última actualización?") +
+    ylab("Cantidad") +
+    xlab("Dispositivos actualizados")
+ggplotly(temp)
+```
+
+La cantidad de dispositivos que tienen su última actualización más seleccionada coincide con la cantidad de dispositivos que tienen los encuestados más seleccionada. Esto nos indica que la mayoría de los dispositivos cuentan con su última actualización. Esto se puede deber, nuevamente, a que el sistema operativo del dispositivo siempre te notifica cuando una nueva actualización está disponible. Una razón por la cual algunos dispositivos no tengan la última actualización es que las últimas actualizaciones no están disponibles para esos dispositivos. 
+
+### Dispositivos utilizados
+
+```{r}
+dispositivos_utilizados$dispositivos_cantidad <-
+    trim(dispositivos_utilizados$dispositivos_cantidad)
+
+temp <- 
+    dispositivos_utilizados %>%
+    group_by(dispositivos_cantidad) %>%
+    tally() %>%
+    na.omit()
+plot_ly(temp, labels = ~dispositivos_cantidad, values = ~n, type='pie') %>%
+    layout(title = "¿Cuáles dispositivos tienes?")
+```
+
+Las opciones más populares son celular y computadora. Esto es de esperarse ya que el celular es un dispositivo necesario que usamos casi todo el tiempo. Una computadora personal es muy útil en un contexto universitario, al igual que la tablet, por lo tanto, son las dos opciones más comunes de poseer después del celular. 
+
+### Dispositivos más utilizados
+
+```{r}
+temp <- 
+    dispositivos_mas_utilizados %>%
+    rename(celular = ordena_celular,
+           computadora = ordena_compu,
+           otro = ordena_otro,
+           smartwatch = ordena_smart,
+           tablet = ordena_tablet) %>%
+    pivot_longer(cols = c("celular","computadora", "otro",
+                          "smartwatch","tablet"),
+             names_to = "name", values_to = "value") %>%
+    na.omit() %>%
+    group_by(name, value) %>%
+    tally()
+
+temp$value <- factor(temp$value, levels = c("Tercero","Segundo","Primero"))
+
+temp <-
+    temp %>%
+    ggplot(aes(x=name,y=n, fill = value)) +
+    geom_bar(position = "stack", stat = "identity") +
+    labs(title = "¿Cuáles dispositivos utilizas más?",
+         fill = "Orden") +
+    ylab("Cantidad") +
+    xlab("Dispositivos más utilizados")
+
+ggplotly(temp)
+```
+
+Los resultados de esta gráfica indican que la mayoría de encuestados consideran que el celular es el dispositivo que más utilizan, seguido de la computadora y en tercer lugar las tablets.   
+
+### Redes sociales utilizadas
+
+```{r}
+sociales_utilizadas$sociales_cuales <-
+    trim(sociales_utilizadas$sociales_cuales)
+
+temp <- 
+    sociales_utilizadas %>%
+    group_by(sociales_cuales) %>%
+    tally() %>%
+    na.omit()
+plot_ly(temp, labels = ~sociales_cuales, values = ~n, 
+        type='pie') %>%
+    layout(title = "¿Cuáles son las redes sociales utilizadas?")
+```
+
+Prácticamente toda nuestra población utiliza redes sociales. Las más comunes son aquellas propiedad de Meta: WhatsApp, Instagram y Facebook, primer, segundo y tercer lugar respectivamente. Esto nos indica que Meta tiene una gran porción del mercado, por lo tanto, es responsable de los datos de muchas personas. 
+
+### Redes sociales más utilizadas
+
+```{r}
+temp <- 
+    sociales_mas_utilizadas %>%
+    select(starts_with("ordena")) %>%
+    rename(facebook = ordena_facebook,
+           instagram = ordena_instagram,
+           whatsapp = ordena_whatsapp,
+           twitter = ordena_twitter,
+           tiktok = ordena_tiktok,
+           ninguna = ordena_ninguna,
+           otra = ordena_otra) %>%
+    pivot_longer(cols = c("facebook","instagram","whatsapp",
+                          "twitter", "tiktok","ninguna","otra"),
+                 names_to = "name", values_to = "value") %>%
+    na.omit() %>%
+    group_by(name, value) %>%
+    tally()
+
+temp$value <- factor(temp$value, levels = c("Tercera","Segunda","Primera"))
+
+temp <-
+    temp %>%
+    ggplot(aes(x=name,y=n, fill = value)) +
+    geom_bar(position = "stack", stat = "identity") +
+    labs(title = "¿Cuáles redes sociales se utilizan más?",
+         fill = "Orden") +
+    ylab("Cantidad") +
+    xlab("Redes sociales más utilizadas")
+
+ggplotly(temp)
+```
+
+Los resultados de esta gráfica es consistente con la anterior, ya que la red social que más ocupa el primer lugar de red social más utilizada es WhatsApp, Instagram es la red social que más ocupa el segundo lugar y la red social que más ocupa el tercer lugar es entre Facebook e Instagram. 
+WhatsApp puede ser la opción más popular debido a que su uso es muy flexible, puede ser un uso casual (hablar con tus amigos) o formal (comunicarse con compañeros de la escuela o trabajo). 
+
+### Compras en línea
+
+```{r}
+temp <- 
+    compras_linea %>%
+    group_by(banca) %>%
+    tally()
+plot_ly(temp, labels = ~banca, values = ~n, type='pie') %>%
+    layout(title = "¿Tienen banca electrónica?")
+```
+
+La mayoría de los encuestados sí cuenta con banca electrónica.
+
+```{r}
+temp <- 
+    compras_linea %>%
+    group_by(compras_online) %>%
+    tally()
+plot_ly(temp, labels = ~compras_online, values = ~n, 
+        type='pie') %>%
+    layout(title = "¿Realizan compras en línea?")
+```
+
+La vasta mayoría de la población de estudio sí ha realizado compras en línea lo cual, sin las precauciones adecuadas, puede aumentar el peligro de que información bancaria sea robada. Las compras en línea han aumentado significantemente a partir de la pandemia, siendo cada vez más común pedir artículos de sitios web como Amazon, Mercado libre e incluso Facebook. 
+
+```{r}
+temp <- 
+    compras_linea %>%
+    group_by(paypal) %>%
+    tally() %>%
+    na.omit()
+plot_ly(temp, labels = ~paypal, values = ~n, type='pie') %>%
+    layout(title = "¿Utilizan paypal o tarjeta digital?")
+```
+
+La mayoría de los encuestados sí usa una tarjeta digital o alguna plataforma de sistema de pagos en línea. Esto quiere decir que consideran que es son más convenientes estas alternativas a su contraparte física. 
+
+```{r}
+temp <- 
+    compras_linea %>%
+    group_by(cargos) %>%
+    tally()
+plot_ly(temp, labels = ~cargos, values = ~n, type='pie') %>%
+    layout(title = "¿Han recibido cargos no reconocidos de aplicaciones en periodo de prueba?")
+```
+
+A la gran mayoría de los encuestados no le han llegado cargos no autorizados de aplicaciones despúes del periodo prueba. Esto es evidencia de que la información bancaria del usuario no es usada, en la mayoría de los casos, después de que el usuario usa su periodo de prueba. 
+
+# Medidas de prevención
+
+En medidas de prevención vimos conveniente dividirlo en dos partes, ya que cada una nos permitió presentar resultados más completos y precisos.
+
+## Medidas de prevención ante ataques digitales
+
+El objetivo de este apartado es conocer las situaciones en las que los encuestados se han encontrado que pueden comprometer su seguridad digital, las medidas que toman para prevenirlo y si saben cómo pueden evitarlo. Se les preguntó a los encuestados su percepción de los términos y condiciones, si configuran las cookies que manejan ciertos sitios web, los ataques de los que han sido víctimas los encuestados, si lo pudieron haber evitado de alguna manera y si conocen a alguien que ha sufrido alguno de ellos para verificar qué tan comunes son en internet. También se les pregunta las medidas de seguridad que toman para proteger sus cuentas de estos ataques.  
+
+### Cookies
+
+```{r}
+temp <- 
+    cookies %>%
+    group_by(term_cond) %>%
+    tally()
+plot_ly(temp, labels = ~term_cond, values = ~n, type='pie') %>%
+    layout(title = "¿Leen los términos y condiciones?")
+```
+
+La flojera puede ser una de las razones más influyentes por las que ignoramos los términos y condiciones. 
+
+```{r}
+temp <- 
+    cookies %>%
+    group_by(cookies) %>%
+    tally()
+plot_ly(temp, labels = ~cookies, values = ~n, type='pie') %>%
+    layout(title = "¿Configuran las cookies?")
+```
+
+La mayoría de los encuestados no le da la suficiente importancia a las cookies puesto que aceptan el default. Esto provoca que se comparta parte de nuestra información por internet. 
+
+```{r}
+temp <- 
+    cookies %>%
+    group_by(cookies_accesibles) %>%
+    tally()
+plot_ly(temp, labels = ~cookies_accesibles, values = ~n, type='pie') %>%
+    layout(title = "¿Los términos y condiciones deberían ser más accesibles")
+```
+
+Si las cookies fueran presentadas de una manera más clara y corta, entonces la gente les prestaría un poco mas de atención. 
+
+```{r}
+temp <- 
+    cookies %>%
+    group_by(publicidad) %>%
+    tally()
+plot_ly(temp, labels = ~publicidad, values = ~n, type='pie') %>%
+    layout(title = "¿Aparece publicidad relacionada a nuestras búsquedas?")
+```
+
+La mayoría de nuestros encuestados ha sido víctima de las cookies en cuanto a publicidad en linea. 
+
+### Víctimas
+
+```{r}
+temp <- 
+    victimas %>%
+    group_by(victima) %>%
+    tally() %>%
+    filter(victima != "NA") %>%
+    arrange(victima)
+    
+
+temp <- 
+    temp %>%
+    ggplot(aes(x=victima, y=n, fill = n)) +
+    geom_bar(stat = "identity") +
+    coord_flip() +
+    scale_x_discrete(labels=substr(unique(sort(victimas$victima)),
+                                   0,20)) +
+    labs(title = "¿De cuáles casos han sido víctimas?",
+         fill = "Cantidad") +
+    ylab("Cantidad") +
+    xlab("Casos")
+ggplotly(temp)
+```
+
+La mayoría de los encuestados ha sido víctima de un intento de fraude por medio de un correo electrónico en los que la  mayoría de las veces se solicita visitar algún sitio en el que se registran tus datos sin tu permiso.
+
+### Víctimas conocidas
+
+```{r}
+temp <- 
+    victima_conocido %>%
+    group_by(con_victima) %>%
+    tally()
+plot_ly(temp, labels = ~con_victima, values = ~n, type='pie') %>%
+    layout(title = "¿Conocen a alguien que haya sido víctima de los casos anteriores?")
+```
+
+```{r}
+temp <- 
+    victima_conocido %>%
+    group_by(evitado) %>%
+    tally()
+plot_ly(temp, labels = ~evitado, values = ~n, type='pie') %>%
+    layout(title = "¿Creen que se pudo haber evitado ser víctima de los casos anteriores?")
+```
+
+### Seguridad
+
+```{r}
+seguridad$proteccion <- trim(seguridad$proteccion)
+
+temp <- 
+    seguridad %>%
+    group_by(proteccion) %>%
+    tally() %>%
+    filter(proteccion != "NA") %>%
+    arrange(proteccion)
+    
+
+temp <- 
+    temp %>%
+    ggplot(aes(x=proteccion, y=n, fill=n)) +
+    geom_bar(stat = "identity") +
+    coord_flip() +
+    scale_x_discrete(labels=substr(unique(sort(seguridad$proteccion)),0,20)) +
+    labs(title = "¿Cuáles medidas de protección utilizan?",
+         fill = "Cantidad") +
+    ylab("Cantidad") +
+    xlab("Medidas de protección")
+ggplotly(temp)
+```
+
+## Medidas de prevención en navegación
+
+En este apartado nos centramos en conocer las medidas de seguridad que toma el encuestado mientras navega en la red. Preguntamos si cuenta con alguna protección de privacidad, phishing y malware dentro de la configuración de su navegador y si se percata que todos los URL que visita inicien con https. Esto nos permitirá conocer las medidas de seguridad más utilizadas en nuestra población de interés. 
+
+### Navegación
+
+```{r}
+temp <- 
+    navegacion %>%
+    group_by(navegador) %>%
+    tally()
+plot_ly(temp, labels = ~navegador, values = ~n, type='pie') %>%
+    layout(title = "¿Protección de privacidad en el navegador?")
+```
+
+La mayoría sí cuenta con filtros de seguridad y esto nos funciona cuando entramos a alguna página que es insegura y el mismo navegador da la advertencia. Eso sin lugar a duda es de gran ayuda para el usuario.
+
+```{r}
+temp <- 
+    navegacion %>%
+    group_by(url) %>%
+    tally()
+plot_ly(temp, labels = ~url, values = ~n, type='pie') %>%
+    layout(title = "¿Verifican que el url de los sitios comience con https?")
+```
+
+La mayoría de los encuestados no se percata de que las páginas inicien con https.
+
+```{r}
+temp <- 
+    navegacion %>%
+    group_by(phishing) %>%
+    tally()
+plot_ly(temp, labels = ~phishing, values = ~n, type='pie') %>%
+    layout(title = "¿Protección contra phishing y malware en el navegador?")
+```
+
+Los usuarios no le toman atención suficiente al pishing: no es una palabra con la cual todo el mundo está relacionado.
+
+# Manejo de información
+
+En manejo de información nos enfocamos en conocer la percepción que tiene el encuestado sobre la fluidez con la que sus datos circulan y la importancia que le dan a su información personal. Adicionalmente, estudiamos la manera en la que los encuestados perciben a las empresas y la función que emplean a la hora de manejar sus datos personales.
+
+### Información 
+
+```{r}
+temp <- 
+    informacion %>%
+    group_by(datos) %>%
+    tally()
+plot_ly(temp, labels = ~datos, values = ~n, type='pie') %>%
+    layout(title = "¿Sientes que tus datos en la web son de utilidad para los sitios?")
+```
+
+Más de la mitad de nuestros encuestados conciben su información personal como algo valioso para las sitios. Esto se debe a que, mucha de esta información es utilizada para anuncios personalizados y los usuarios de redes sociales notan rápidamente la diferencia. Por otro lado, es evidente que 1/4 de los encuestados necesita informarse sobre este tema, ya que no fueron capaces de tomar una decisión concreta.
+
+```{r}
+temp <- 
+    informacion %>%
+    group_by(empresas) %>%
+    tally()
+plot_ly(temp, labels = ~empresas, values = ~n, type='pie') %>%
+    layout(title = "¿Crees que las empresas utilizan la información de manera adecuada?")
+```
+
+La mayoría de los encuestados demuestra una desconfianza hacia las empresas que manejan sus datos personales. Probablemente, esto sea debido a que, existen varios escándalos muy populares sobre el mal uso de datos por parte de las empresas, por ejemplo, el caso de *Cambridge Analytica* y su influencia en las elecciones del 2016, el caso de *Facebook* de 2021 y el de *Yahoo* del 2013.
+
+```{r}
+temp <- 
+    informacion %>%
+    group_by(preocupacion_empresas) %>%
+    tally()
+plot_ly(temp, labels = ~preocupacion_empresas, values = ~n, type='pie') %>%
+    layout(title = "¿Te preocupa que tu información sea utilizda con fines distintos?")
+```
+
+Casi el 80% de los encuestados estuvo de acuerdo en que es algo preocupante el hecho que las empresas ejerzan un uso inadecuado de los datos. Este resultado es realmente impactante ya que, aunque no mucha gente conciba su información como algo útil o relevante a las empresas, a estás mismas les preocupa que hagan mal uso de esa información ´inútil´ que las empresas reciben por parte de los usuarios. 
+
+![](bait.jpg)
+
+```{r}
+temp <- 
+    informacion %>%
+    group_by(username) %>%
+    tally()
+no <- filter(temp, username == "No me interesa")$n
+user <- c("Proporionó su usuario", "No lo proporcionó")
+n <- c(sum(temp$n)-no,no)
+temp <-data.frame(user,n)
+
+plot_ly(temp, labels = ~user, values = ~n, type='pie') %>%
+    layout(title = "¿Los usuarios dejan su información?")
+```
+
+Podemos ver con que facilidad los usuarios proporcionan su información personal.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
