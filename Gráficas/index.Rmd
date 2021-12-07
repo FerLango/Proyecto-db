@@ -69,15 +69,18 @@ El objetivo de conocer la demografía es analizar cómo se compone nuestra pobla
 
 ### Población
 
+### ¿Eres alumno de licenciatura?
+
 ```{r}
 temp <- 
-    poblacion %>%
+    poblacion %>% 
     group_by(licenciatura) %>%
     tally()
 plot_ly(temp, labels = ~licenciatura, values = ~n, type='pie')
 ```
+La encuesta fue lanzada en redes sociales donde la mayoria de los participantes son de nuestra edad, donde aqui podemos observar que el 95% de los encuestados actualmente cursan una licenciatura cosa que es favorable, es decir, es bueno saber que los jovenes de ahora actualmente siguen estudiando. 
 
-
+### ¿En qué estado se encuentra ubicada tu Universidad?
 ```{r}
 estados <- 
     poblacion %>%
@@ -98,7 +101,9 @@ mxstate_choropleth(mapa, num_colors = 1,
                    title = "Número de personas por estado en México") %>%
     ggplotly()
 ```
+Aquí podemos observar que la mayoría de los encuestados viven en la ciudad de mexico y Estado de Mexico, donde nos pone a pensar que podemos ser parte de la cuna de la educacion del país, ya que mucha gente prefiere venir a este estado a estudiar
 
+### ¿Qué edad tienes?
 ```{r}
 temp <- 
     poblacion %>%
@@ -112,7 +117,9 @@ temp <-
     geom_bar(stat = "identity")
 ggplotly(temp)
 ```
+En esta grafica podemos observar que la mayoria de los encuestados tienen de 17 a 24 años, que es la edad mas comun , sin en cambio, tambien nos resulto interesante e inspirador que hubieran personas de 31 y de 42 años cursando la licenciatura.
 
+### Género
 ```{r}
 temp <- 
     poblacion %>%
@@ -121,7 +128,9 @@ temp <-
     na.omit()
 plot_ly(temp, labels = ~genero, values = ~n, type='pie')
 ```
+Esta encuesta resulto un poco interesante, pues hubieron personas que prefirieron no decir su genero y una simplemente puso otro, esto nos demuestra que actualemente este tema se ha ido aceptando mas  y que ya no nos debemos de regir por solo masculino o femenino.
 
+### ¿A qué área corresponde tu carrera?
 ```{r}
 temp <- 
     poblacion %>%
@@ -130,13 +139,14 @@ temp <-
     na.omit()
 plot_ly(temp, labels = ~areas, values = ~n, type='pie')
 ```
-
+En esta grafica podemos observar que el area de fisico matematico gana un poco màs de la mitad de encuestados que a su ves compite con el area de sociales, esto tambien ha ido cambiando con el tiempo, pues antes se tenia que estudiar una carrera familiar o una que simplemente te genere buenos ingresos economicos y con esto, podemos ver que las sociales han ido incrementando puesto que hoy en dia los encuestados tienen mas libertad de elegir su carrera y no se las imponen. 
 # Exploratorias
 
 Como un primer acercamiento al encuestado del tema que trataran las siguientes preguntas y más que nada, para conocer su primera impresión del tema, les preguntamos si conocían los términos de “seguridad digital”, “privacidad digital”, “huella digital” y qué importancia le daban.
 
 ### Percepción 
 
+### ¿Del 1 al 5 que tanto te preocupa tu seguridad digital?
 ```{r}
 temp <- 
     percepcion %>%
@@ -150,7 +160,9 @@ temp <-
     geom_bar(stat = "identity")
 ggplotly(temp)
 ```
+En esta grafica nosotros esperabamos que todos los encuestados les preocupara su seguridad en internet... pero los resultados aunque si son  favorables en cuanto a la importancia que le dan a la seguridad en  en linea hay personas que no le toman la atencion necesaria, es decir, que pueden ser posibles victimas en que sean privados de su informacion en linea, creemos que este tema se debe de tocar mas y que la informacion sea mas comun entre los cibernautas.
 
+### ¿Sabes en qué consiste la privacidad digital?
 ```{r}
 temp <- 
     percepcion %>%
@@ -158,7 +170,9 @@ temp <-
     tally()
 plot_ly(temp, labels = ~privacidad, values = ~n, type='pie')
 ```
+De acuerdo a la grafica anterior, hacemos recalco que la informacion  debe de ser mas difundida entre los usuarios de internet, puesto que al no hacer esto mas publico mucha gente cae y puede ser mas propensa a sufrir algun imprevisto. 
 
+### ¿Conoces el término de huella digital?
 ```{r}
 temp <- 
     percepcion %>%
@@ -166,6 +180,7 @@ temp <-
     tally()
 plot_ly(temp, labels = ~huella, values = ~n, type='pie')
 ```
+En esta encuesta podemos observar que la mayoria de la gente tiene el conocimiento de que es una huella digital, puesto que los celulares han implementado estas medidas de seguridad para poder usar el dispositivo, esto hicieron que la gente estuviera mas familiarizado con este tipo de metodo de autenticación, porque eso si, puede ser uno de los mejores metodos para brindarle seguridad al usuario puesto que ninguna huella digital  se repite o se puede falsificar de manera sencilla. 
 
 # Vulnerabilidad
 
@@ -381,6 +396,7 @@ El objetivo de este apartado es conocer las situaciones en las que los encuestad
 
 ### Cookies
 
+### Cuando te registras en algún sitio web, ¿te detienes a leer sus términos y condiciones, o los aceptas sin leerlos?
 ```{r}
 temp <- 
     cookies %>%
@@ -388,7 +404,9 @@ temp <-
     tally()
 plot_ly(temp, labels = ~term_cond, values = ~n, type='pie')
 ```
+En esta grafica podemos observar que la flojera puede ser una de las cosas mas influyentes de la fuerza que hoy en dia tienen las cookies, puesto que ignoramos los terminos y condiciones. Hoy en dia las mejores herramientas que tienen hoy en dia las busquedas de internet,puesto que su servicio suele ser mas efectivo hacia las empresas, ya que redirige a clientes potenciales y eso es porque compartimos "sin querer" nuestros intereses. 
 
+### Cuando entras a un sitio web, ¿configuras las cookies, o aceptas el default?
 ```{r}
 temp <- 
     cookies %>%
@@ -396,7 +414,9 @@ temp <-
     tally()
 plot_ly(temp, labels = ~cookies, values = ~n, type='pie')
 ```
+Aqui podemos observar que la mayoria de los encuestados no le toma importancia a las cookies puesto que aceptan el default y este mismo hace que comparta la mayoria  de sus gustos. 
 
+### ¿Crees que sería conveniente para el usuario que los términos y condiciones o cookies fueran presentados de una forma más accesible para todo tipo de público?
 ```{r}
 temp <- 
     cookies %>%
@@ -404,7 +424,9 @@ temp <-
     tally()
 plot_ly(temp, labels = ~cookies_accesibles, values = ~n, type='pie')
 ```
+En cuanto a lo que respondieron los encuestados podemos llegar a la  conclusion que si las cookies fueran presentadas de una manera mas clara y corta la gente les prestaria un poco mas de atencion y no tuvieramos problemas con la privacidad cuando estamos en linea. 
 
+### Después de buscar algún artículo en internet, ¿la publicidad que se le muestra en redes sociales corresponde a ese artículo?
 ```{r}
 temp <- 
     cookies %>%
@@ -412,9 +434,10 @@ temp <-
     tally()
 plot_ly(temp, labels = ~publicidad, values = ~n, type='pie')
 ```
-
+En esta grafica podemos percatarnos que la mayoria ha sido victima de la efectividad que tiene las cookies en cuanto a publicidad en linea, puesto que cuando hacemos alguna busqueda y cambiamos de app encotramos ads relacionados a la busqueda anterior. 
 ### Víctimas
 
+### ¿Has sido víctima de alguno de estos escenarios?
 ```{r}
 temp <- 
     victimas %>%
@@ -433,9 +456,11 @@ temp <-
                         substr(unique(sort(victimas$victima)),0,20))
 ggplotly(temp)
 ```
+En esta grafica nos podemos percatar que la mayoria de los encuestados ha sido  participe en intento de fraude por medio de un correo electronico, donde la  mayoria de las veces te solicitan visitar algun sitio donde registran tus datos sin tu permiso y otro muy comun y con el cual podemos estar familiarizado es con los cambios que se hacen en tus dispositivos, que al no leer bien lo que haran puedes caerte facilemente. 
 
 ### Víctimas conocidas
 
+### ¿Conoces a alguien que haya sido víctima de estos escenarios? 
 ```{r}
 temp <- 
     victima_conocido %>%
@@ -443,7 +468,9 @@ temp <-
     tally()
 plot_ly(temp, labels = ~con_victima, values = ~n, type='pie')
 ```
+En esta grafica podemos ver que la mayoria ha sido o conoce a alguien que fue victima de este tipo de fraude que podemos encontrar en internet. 
 
+### ¿Crees que lo pudiste haber evitado de alguna manera?
 ```{r}
 temp <- 
     victima_conocido %>%
@@ -451,9 +478,11 @@ temp <-
     tally()
 plot_ly(temp, labels = ~evitado, values = ~n, type='pie')
 ```
+En esta otra grafica podemos darnos cuenta que la informacion aun no esta clara para muchos de los que puede ser propensos a estos tipos de ataques,  puesto que mucha gente sigue siendo victima , aun no sabe con exactitud que medidas se pueden tomar para que esto se evite y no siga siendo inseguro estar en linea.
 
 ### Seguridad
 
+### Con el fin de proteger tus cuentas de redes sociales, ¿cuáles de las siguientes opciones realizas?
 ```{r}
 seguridad$proteccion <- trim(seguridad$proteccion)
 
@@ -474,6 +503,7 @@ temp <-
                         substr(unique(sort(seguridad$proteccion)),0,20))
 ggplotly(temp)
 ```
+En esta grafica podemos observar que actualmente la mayoria sabe tomar sus precauciones en cuanto a su privacidad y seguridad, por ejemplo, al tener cuidado  en entrar a los enlaces que luego te envian a paginas no deseadas o donde te pueden robar tus datos personales. Otra de las medidas que nos llamo la atencion poder observar fue crear una contraseña segura, no contraseñas donde es nuestro perro o dia de nacimiento. 
 
 ## Medidas de prevención en navegación
 
@@ -481,6 +511,7 @@ En este apartado nos centramos en conocer las medidas de seguridad que toma el e
 
 ### Navegación
 
+### ¿Tienes configurado en tu navegador alguna protección de privacidad?
 ```{r}
 temp <- 
     navegacion %>%
@@ -488,7 +519,9 @@ temp <-
     tally()
 plot_ly(temp, labels = ~navegador, values = ~n, type='pie')
 ```
+En esta grafica podemos observar que en cuanto al uso del navegador, la mayoria si cuenta con filtros de seguridad y esto nos funciona cuando entramos a alguna pagina que es insegura y el mismo navegador te da la advertencia. Eso sin lugar a dudas es una gran ayuda para el usuario.
 
+### ¿Verificas si todos los URL de los sitios que visitas inician con https?
 ```{r}
 temp <- 
     navegacion %>%
@@ -496,6 +529,9 @@ temp <-
     tally()
 plot_ly(temp, labels = ~url, values = ~n, type='pie')
 ```
+En esta grafica podemos observar que la mayoria de los encuestados nos se  percata que las paginas inicien con hhtps y es entendible, puesto que muchos navegadores acortan la direccion web para no saturar de espacio la barra... aunque con esto, nos podemos ir con la finta que todas las paginas son asi y  que por lo tanto son seguras, debemos de fijarnos bien en eso de ahora en adelante.
+
+### ¿Tienes activada alguna protección contra phishing (engaño para obtener tus datos a través de internet) y malware (programa malicioso que daña tu dispositivo)?
 
 ```{r}
 temp <- 
@@ -504,6 +540,7 @@ temp <-
     tally()
 plot_ly(temp, labels = ~phishing, values = ~n, type='pie')
 ```
+En esta pregunta resulta un poco entendible porque los usuarios no le toman atencion a cosas como el pishing, en primera, no es una palabra con la cual todo el mundo esta relacionado y en segunda, debes de tener algun tipo de conocimiento en informatica para saber en que consiste o que existe este  tipo de cosas. Como lo comentabamos en graficas anteriores, es de suma importancia poder dar a conocer informacion acerca de la seguridad en el internet para que la gente sepa y sea conciente de lo que haga en linea. 
 
 # Manejo de información
 
@@ -511,6 +548,7 @@ En manejo de información nos enfocamos en conocer la percepción que tiene el e
 
 ### Información 
 
+### ¿Sientes que los datos que proporcionas en la web son de importancia/utilidad para los sitios en los que navegas?
 ```{r}
 temp <- 
     informacion %>%
@@ -518,7 +556,9 @@ temp <-
     tally()
 plot_ly(temp, labels = ~datos, values = ~n, type='pie')
 ```
+En esta grafica podemos ver que la mayoria de los encuestados son conscientes que los datos que puedas llegar a publicar en la web pueden ser utilizados para otros fines que problablamente no estes enterado.
 
+### ¿Crees que las empresas utilizan la información de manera adecuada?
 ```{r}
 temp <- 
     informacion %>%
@@ -526,7 +566,9 @@ temp <-
     tally()
 plot_ly(temp, labels = ~empresas, values = ~n, type='pie')
 ```
+Como podemos ver en esta grafica, el usuario esta de acuerdo que su informacion no es usada de la mejor manera, puesto que muchas veces al no tener una privacidad al 100% llegan a suceder casos de acoso. 
 
+### ¿Te preocupa que tu información sea utilizada con fines distintos a los que autorizaste?
 ```{r}
 temp <- 
     informacion %>%
@@ -534,7 +576,8 @@ temp <-
     tally()
 plot_ly(temp, labels = ~preocupacion_empresas, values = ~n, type='pie')
 ```
-
+Aqui podemos observar que la preocupacion de que las empresas utilicen de mala manera tus datos es latente, pues muchas veces no sabemos a donde y con quien estan tus datos personales. 
+ 
 ```{r}
 temp <- 
     informacion %>%
