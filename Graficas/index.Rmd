@@ -29,10 +29,17 @@ driver <- dbDriver(drvName = "PostgreSQL")
 
 db <- dbConnect(driver,
                 dbname="postgres",
-                host="54.161.119.17",
+                host="equiposinarturo-server.eastus.cloudapp.azure.com",
                 port=5432,
                 user="admin",
                 password = getPass("Password:"))
+
+# db <- dbConnect(driver,
+#                 dbname="postgres",
+#                 host="54.161.119.17",
+#                 port=5432,
+#                 user="admin",
+#                 password = getPass("Password:"))
 
 compras_linea <- dbGetQuery(db,'SELECT * FROM "compras_linea"')
 cookies <- dbGetQuery(db,'SELECT * FROM "cookies"')
@@ -61,7 +68,7 @@ En el presente trabajo se pretende conocer la percepción sobre ciberseguridad e
 
 Para poder llevar a cabo este estudio se realizó una encuesta a `r nrow(poblacion)` sujetos por medio de un Google Forms compuesto por un total de 36 preguntas de tipo opción múltiple.
 
-Los datos recolectados a través de este cuestionario son procesados en el lenguaje R e incorporados a una base de datos *PostreSQL* que se encuentra activa dentro de [Amazon Web Services (AWS)](https://aws.amazon.com/). Posteriormente, el análisis presentado a continuación mostrando los resultados correspondientes también fue generado con el lenguaje R.
+Los datos recolectados a través de este cuestionario son procesados en el lenguaje R e incorporados a una base de datos *PostreSQL* que se encuentra activa dentro de [Amazon Web Services (AWS)](https://aws.amazon.com/) o [Microsoft Azure](https://azure.microsoft.com/en-us/). Posteriormente, el análisis presentado a continuación mostrando los resultados correspondientes también fue generado con el lenguaje R.
 
 # Demografía
 
@@ -78,7 +85,7 @@ plot_ly(temp, labels = ~licenciatura, values = ~n, type='pie') %>%
     layout(title = "¿Son alumnos de licenciatura?")
 ```
 
-Este resultado nos demuestra que el objetivo de difundir a alumnos de licenciatura la encuesta fue logrado exitosamente, ya que, solamente un 4% no fueron alumnos de licenciatura.
+Este resultado nos demuestra que el objetivo de difundir a alumnos de licenciatura la encuesta fue logrado exitosamente, ya que, solamente un `r round(temp$n[1]/(sum(temp$n))*100,2)`% no fueron alumnos de licenciatura.
 
 ```{r}
 estados <- 
@@ -121,7 +128,7 @@ temp <-
 ggplotly(temp)
 ```
 
-Vemos que aproximadamente el 70% de los encuestados tienen 19 o 20 años, esto es debido a que nuestro circulo social esta rodeado de personas de nuestra edad. Además, nos resulto interesante e inspirador que hubieran personas de 31 y de 42 años cursando la licenciatura.
+Vemos que la mayoría de los encuestados tienen cerca de 20 años, esto es debido a que nuestro circulo social esta rodeado de personas de nuestra edad. Además, nos resulto interesante e inspirador que hubieran personas de 31 y de 42 años cursando la licenciatura.
 
 ```{r}
 temp <- 
@@ -145,7 +152,7 @@ plot_ly(temp, labels = ~areas, values = ~n, type='pie') %>%
     layout(title = "Área de estudio")
 ```
 
-Casi el 90% de los encuestados pertenecen a área 1 y área 3.
+Alrededor del 90% de los encuestados pertenecen al área 1 y área 3.
 
 # Exploratorias
 
@@ -181,7 +188,7 @@ plot_ly(temp, labels = ~privacidad, values = ~n, type='pie') %>%
     layout(title = "¿Saben qué es la privacidad digital?")
 ```
 
-La mayoría de los estudiantes de licenciatura conocen que es la privacidad digital, hay una posible mejora en este aspecto, ya que el 26% afirma no conocer bien este término.
+La mayoría de los estudiantes de licenciatura conocen que es la privacidad digital, hay una posible mejora en este aspecto, ya que el `r round(temp$n[1]/(sum(temp$n))*100,2)`% afirma no conocer bien este término.
 
 ```{r}
 temp <- 
@@ -192,7 +199,7 @@ plot_ly(temp, labels = ~huella, values = ~n, type='pie') %>%
     layout(title = "¿Saben qué es la huella digital?")
 ```
 
-Casi el 80% sabe a lo que significa huella digital, lo cual, implica que la población está bien informada.
+El `r round(temp$n[2]/(sum(temp$n))*100,2)`% sabe lo que significa huella digital, lo cual, implica que la población está aparentemente bien informada.
 
 # Vulnerabilidad
 
@@ -604,7 +611,7 @@ plot_ly(temp, labels = ~datos, values = ~n, type='pie') %>%
     layout(title = "¿Sientes que tus datos en la web son de utilidad para los sitios?")
 ```
 
-Más de la mitad de nuestros encuestados conciben su información personal como algo valioso para las sitios. Esto se debe a que, mucha de esta información es utilizada para anuncios personalizados y los usuarios de redes sociales notan rápidamente la diferencia. Por otro lado, es evidente que 1/4 de los encuestados necesita informarse sobre este tema, ya que no fueron capaces de tomar una decisión concreta.
+Más de la mitad de nuestros encuestados conciben su información personal como algo valioso para las sitios. Esto se debe a que, mucha de esta información es utilizada para anuncios personalizados y los usuarios de redes sociales notan rápidamente la diferencia. Por otro lado, es evidente que `r round(temp$n[2]/(sum(temp$n))*100,2)` de los encuestados necesita informarse sobre este tema, ya que no fueron capaces de tomar una decisión concreta.
 
 ```{r}
 temp <- 
@@ -626,7 +633,7 @@ plot_ly(temp, labels = ~preocupacion_empresas, values = ~n, type='pie') %>%
     layout(title = "¿Te preocupa que tu información sea utilizda con fines distintos?")
 ```
 
-Casi el 80% de los encuestados estuvo de acuerdo en que es algo preocupante el hecho que las empresas ejerzan un uso inadecuado de los datos. Este resultado es realmente impactante ya que, aunque no mucha gente conciba su información como algo útil o relevante a las empresas, a estás mismas les preocupa que hagan mal uso de esa información ´inútil´ que las empresas reciben por parte de los usuarios. 
+El `r round(temp$n[3]/(sum(temp$n))*100,2)`% de los encuestados estuvo de acuerdo en que es algo preocupante el hecho que las empresas ejerzan un uso inadecuado de los datos. Este resultado es realmente impactante ya que, aunque no mucha gente conciba su información como algo útil o relevante a las empresas, a estás mismas les preocupa que hagan mal uso de esa información ´inútil´ que las empresas reciben por parte de los usuarios. 
 
 ![](bait.jpg)
 

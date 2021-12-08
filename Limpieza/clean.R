@@ -131,10 +131,17 @@ driver <- dbDriver(drvName = "PostgreSQL")
 
 db <- dbConnect(driver,
                 dbname="postgres",
-                host="54.161.119.17",
+                host="equiposinarturo-server.eastus.cloudapp.azure.com",
                 port=5432,
                 user="admin",
                 password = getPass("Password:"))
+
+# db <- dbConnect(driver,
+#                 dbname="postgres",
+#                 host="54.161.119.17",
+#                 port=5432,
+#                 user="admin",
+#                 password = getPass("Password:"))
 
 if (length(dbReadTable(db,"demograficos")$id) == 0) {
     rows <- 0
