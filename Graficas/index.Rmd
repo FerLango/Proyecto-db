@@ -487,6 +487,9 @@ La mayoría de nuestros encuestados ha sido víctima de las cookies en cuanto a 
 ### Víctimas
 
 ```{r}
+victimas$victima <-
+    trim(victimas$victima)
+
 temp <- 
     victimas %>%
     group_by(victima) %>%
